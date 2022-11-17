@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Interface</title>
+
+	<meta name="description" content="Get familiar with the Lunacy interface">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-64.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-96.png"/>
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/jquery.modal.min.css">
+
+	</head>
+	<body class="blue">
+		
+	<header class="site-header">
+		<div class="container-fluid">
+			<div class="row">
+				
+					<a href="https://icons8.com/lunacy" class="site-header__logo">
+						<img src="/doks-theme/assets/images/layout/logo.svg">
+					</a>
+				
+				<div id="mobile-menu" class="site-header__wrapper">
+					
+					<ul class="site-header__nav normalize" data-da>
+						
+							
+								<li><a href="/" class="not-visibly">Documentation</a></li>
+							
+						
+							
+								<li><a href="https://lunatics.icons8.com/" class="not-visibly">Request Features</a></li>
+							
+						
+							
+								<li><a href="/release-notes/" class="not-visibly">Release Notes</a></li>
+							
+						
+							
+								<li><a href="https://community.icons8.com/c/lunacy/" class="not-visibly">Forum</a></li>
+							
+						
+					</ul>
+					
+					<div class="site-header__buttons">
+						<a href="#" class="btn--language not-visibly"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.00033 1.16699C5.09928 1.16699 3.41206 2.08714 2.34619 3.50033H2.33366V3.51628C1.60446 4.49006 1.16699 5.69388 1.16699 7.00033C1.16699 10.2151 3.78557 12.8337 7.00033 12.8337C10.2151 12.8337 12.8337 10.2151 12.8337 7.00033C12.8337 3.78557 10.2151 1.16699 7.00033 1.16699ZM8.75033 2.67432C10.4625 3.36462 11.667 5.03604 11.667 7.00033C11.667 8.21823 11.2007 9.32101 10.4411 10.1506C10.2918 9.67823 9.85549 9.33366 9.33366 9.33366H8.75033V7.58366C8.75033 7.26166 8.48899 7.00033 8.16699 7.00033H5.25033V5.83366H5.83366C6.15566 5.83366 6.41699 5.57233 6.41699 5.25033V4.08366H7.58366C8.22824 4.08366 8.75033 3.56158 8.75033 2.91699V2.67432ZM2.45443 5.95443L3.50033 7.00033L5.25033 8.75033V9.33366C5.25033 9.97824 5.77241 10.5003 6.41699 10.5003V11.6271C4.11036 11.341 2.33366 9.38654 2.33366 7.00033C2.33366 6.63994 2.37771 6.29101 2.45443 5.95443Z" fill="black"/>
+							</svg>EN
+						</a>
+						<a href="https://icons8.com/lunacy" class="btn btn--blue">Download</a>
+						<a href="#" style="display: none;" class="btn">Sign In</a>
+					</div>
+				</div>
+				<div id="site-header-burger" class="site-header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="micro-nav-header menu-disable  page-menu ">
+	
+		<span>Interface / </span><span class="js-subheader"></span>
+	
+	<div class="arrow"></div>
+</div>
+<ul id="micro-nav" class="normalize micro-nav  ">
+	<li>
+		<div class="search">
+    <div class="search__container">
+        <button class="search__button" id="site_search">
+            <img src="/doks-theme/assets/images/layout/search.svg">
+            Search...
+        </button>
+    </div>
+</div>
+
+<div class="search-modal" id="search-modal">
+    <div class="search-bar" id="search-bar">
+    </div>
+    <div class="search-results" id="search-results">
+    </div>
+    <div id="powered-by"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+	</li>
+	
+	
+	<li><a href="/about" class="not-visibly">About Lunacy</a></li>
+	
+	<li><a href="/sysreq" class="not-visibly">System requirements</a></li>
+	
+	<li><a href="/interface" class="not-visibly">Interface</a></li>
+	
+	<li><a href="/clouddocs" class="not-visibly">Cloud documents</a></li>
+	
+	<li><a href="/tools" class="not-visibly">Tools</a></li>
+	
+	<li><a href="/layers" class="not-visibly">Layers</a></li>
+	
+	<li><a href="/editing" class="not-visibly">Editing shapes</a></li>
+	
+	<li><a href="/text" class="not-visibly">Text</a></li>
+	
+	<li><a href="/styling" class="not-visibly">Styling</a></li>
+	
+	<li><a href="/components" class="not-visibly">Components</a></li>
+	
+	<li><a href="/layerstyles/" class="not-visibly">Layer and text styles</a></li>
+	
+	<li><a href="/libraries" class="not-visibly">Libraries</a></li>
+	
+	<li><a href="/images" class="not-visibly">Images</a></li>
+	
+	<li><a href="/export" class="not-visibly">Export</a></li>
+	
+	<li><a href="/prototyping" class="not-visibly">Prototyping</a></li>
+	
+	<li><a href="/linked_design" class="not-visibly">Linked design</a></li>
+	
+	<li><a href="/teams" class="not-visibly">Teams</a></li>
+	
+	<li><a href="/comments" class="not-visibly">Comments</a></li>
+	
+	<li><a href="/tips" class="not-visibly">Tips and Tricks</a></li>
+	
+	<li><a href="/shortcuts" class="not-visibly">Shortcuts</a></li>
+	
+	<li><a href="/localization" class="not-visibly">Localization</a></li>
+	
+	<li><a href="/support" class="not-visibly">FAQ and Сontacts</a></li>
+	
+	<li><a href="/release-notes" class="not-visibly">Release History</a></li>
+	
+	<li class="suggest--github"><a href="https://github.com/icons8/lunacy-docs" class="btn btn--suggest-edit"><i class="icon icon--github"></i>Suggest edits</a></li>
+	
+	
+</ul>
+
+
+					</div>
+					<div class="col-lg-9">
+						<div id="content" class="content">
+							<h2 class="content__title">Interface</h2>
+							<p class="subtitle content__desc">Get familiar with the Lunacy interface</p>
+							<h2 id="overview">Overview</h2>
+
+<p>The Lunacy interface is intuitive and minimal. It contains only essential controls, so you don’t have to spend much time learning how to interact with it.</p>
+
+<!-- 
+
+{:.is-big}
+
+-->
+
+<embed type="image/svg+xml" alt="Lunacy interface" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/61r7kirRVE6WDAz10z-Bdg.svg" />
+
+<p>The interface consists of the following main elements.</p>
+
+<ol>
+  <li>
+    <p>The content tabs. Use them to switch between the:</p>
+
+    <ul>
+      <li>Layer list</li>
+      <li>Document assets (<a href="https://lunacy.docs.icons8.com/components" target="_blank">components</a>, layer and text <a href="https://lunacy.docs.icons8.com/layerstyles/" target="_blank">styles</a>)</li>
+      <li>Built-in Lunacy <a href="https://lunacy.docs.icons8.com/libraries/" target="_blank">libraries</a> of icons, photos and vector images, as well as collections of <a href="https://lunacy.docs.icons8.com/libraries/#ui-kits" target="_blank">UI kits</a></li>
+    </ul>
+
+    <p><!-- and <a href="https://lunacy.docs.icons8.com/plugins" target="_blank">plugins</a> 
+ --></p>
+
+    <ul>
+      <li>List of <a href="https://lunacy.docs.icons8.com/shortcuts" target="_blank">shortcuts</a></li>
+    </ul>
+
+    <p>To shrink the size of the content tabs panel, drag its right border to the left.</p>
+
+    <p><img src="public/shrink_side_panel.gif" alt="Adjusting the size of side panel" /></p>
+  </li>
+  <li>
+    <p>The left panel. Displays the content of the selected tab (1). You can temporarily hide the panel by clicking the current tab, using respective shortcuts (<code class="language-plaintext highlighter-rouge">Alt+1</code>(<code class="language-plaintext highlighter-rouge">⌥ 1</code>)…<code class="language-plaintext highlighter-rouge">Alt+8</code>(<code class="language-plaintext highlighter-rouge">⌥ 8</code>), <code class="language-plaintext highlighter-rouge">Shift+F1</code>) or through the menu (<strong>View</strong> &gt; <strong>Left Panel</strong>).</p>
+  </li>
+  <li>The <strong>toolbar</strong>. Features all the primary Lunacy tools. For details about tools, click <a href="https://lunacy.docs.icons8.com/tools/" target="_blank">here</a>. If you need more space or prefer shortcuts you can toggle off the display of the toolbar through the menu (<strong>View</strong> &gt; <strong>Toolbar</strong>).</li>
+  <li>The <strong>canvas</strong>. That is your working area. For details, read <a href="#the-canvas">below</a>.</li>
+  <li>The <strong>Inspector</strong> panel. Lets you see and adjust the properties of the selected layer. The view of the Properties Inspector varies with the type of the selected layer. For details, read <a href="#the-inspector">below</a>.</li>
+  <li>The <strong>menu bar</strong>. Holds the options and commands related to files, layers, editing, etc. Also, it features the <strong>Home</strong> button that opens the <strong>Home</strong> tab.</li>
+  <li>The <strong>context toolbar</strong>. The set of controls displayed on the context toolbar depends on the type of the currently selected layer. Hover the cursor over a tool icon to see a pop-up explaining what the tool does.</li>
+  <li>The <strong>file tabs panel</strong>. Shows the tabs of currently open files. To switch between the files, just click the respective tab.</li>
+  <li>The <strong>Play</strong> button. Starts the prototype previewer. For details about prototyping in Lunacy, read <a href="https://lunacy.docs.icons8.com/prototyping" target="_blank">here</a>.</li>
+  <li>
+    <p>This button opens a menu with options described in the table below.</p>
+
+    <table>
+<thead>
+    <tr>
+    <th>Button</th>
+    <th>Description</th>
+    <th>Keyboard shortcut/Menu option &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td><img src="/public/interface-rulerbtn.png" alt="Show/Hide rulers button" /></td>
+    <td> The <b>Show/Hide rulers</b> button. Controls the display of rulers. For details, read <a href="https://lunacy.docs.icons8.com/interface/#rulers-and-guides">below</a>.</td>
+    <td><code>Ctrl+R</code> (<code>⌘ R</code>)</td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-layoutbtn.png" alt="Show/Hide layout button" /></td>
+    <td>The <b>Layout</b> button. Controls the display of the layout grid. Available only when there is an artboard on the canvas. For details, read <a href="https://lunacy.docs.icons8.com/interface/#layout-grid">here</a>.</td>
+    <td><code>Ctrl+\</code> (<code>⌃ G</code>)</td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-prototbtn.png" alt="Show prototyping button" /></td>
+    <td>The <b>Show prototyping</b> button. Controls the display of <a href="https://lunacy.docs.icons8.com/tools/#hotspot-tool" target="_blank">hotspots</a> and prototyping arrows.</td>
+    <td><b>View &gt; Prototyping</b></td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-pixelbtn.png" alt="Show pixels on zoom button" /></td>
+    <td>The <b>Show pixels on zoom</b> button. Enables the display of pixels when the zoom value exceeds 100. For details, read  <a href="https://lunacy.docs.icons8.com/interface/#show-pixels-on-zoom">here</a>.</td>
+    <td><b>View &gt; Pixels on Zoom</b></td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-gridbtn.png" alt="Show grid button" /></td>
+    <td>The <b>Show grid</b> button. Enables the display of the square grid. For details, read <a href="https://lunacy.docs.icons8.com/interface/#square-grid">here</a>.</td>
+    <td><code>Ctrl+'</code> (<code>⌘ '</code>)</td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-nightbtn.png" alt="Sketch Cloud Button" /></td>
+    <td>The <b>Enable dark mode</b> button. Turns on/off the night theme in the Lunacy interface.</td>
+    <td><code>-</code></td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-misfontbtn.png" alt="Missing fonts button" /></td>
+    <td>The <b>Missing fonts</b> button. Appears when the file you are working with includes fonts not installed on your computer. For details, read <a href="https://lunacy.docs.icons8.com/text/#missing-fonts" target="_blank">here</a>.</td>
+    <td><code>-</code></td>
+    </tr>
+    <tr>
+    <td><img src="/public/interface-notifybtn.png" alt="Notifications button" /></td>
+    <td>The <b>Notifications</b> button. Appears when you have a new notification from Lunacy. Opens the panel where you can view and manage Lunacy notifications.</td>
+    <td><code>-</code></td>
+    </tr>
+</tbody>
+</table>
+  </li>
+  <li>The <strong>zoom control</strong>. For details, read <a href="#zooming-options">below</a>.</li>
+  <li>The <strong>Dark mode</strong> button. Use it to switch between the light and dark themes.</li>
+</ol>
+
+<h2 id="document-pages">Document pages</h2>
+
+<p>Each document can include any number of pages. You can keep all your work on a single page or split it into several pages by components, if the project is large. For instance, if you are designing a website, you can opt to keep the desktop and mobile versions on separate pages. Or you can duplicate a page to save a snapshot of your current work and continue working with the copy. In fact, the reasons for having multiple pages in a document are numerous and it is completely up to you to decide what approach to choose. The figure below shows a view of a page list. It appears above the Layer List when the <strong>Layers</strong> content tab is selected.</p>
+
+<embed type="image/svg+xml" alt="Pages" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/heVy9uNZn0SrsRJAvB2zhg.svg" />
+
+<p>The operations that you can perform with document pages include:</p>
+
+<ul>
+  <li>Adding pages</li>
+  <li>Changing the order of pages</li>
+  <li>Renaming pages</li>
+  <li>Duplicating pages with their content</li>
+  <li>Copying and pasting pages with their content between documents</li>
+  <li>Deleting pages</li>
+</ul>
+
+<p>To add a new page to the document:</p>
+
+<ol>
+  <li>Click the plus icon above the Layer List.</li>
+  <li>Enter the name of the new page.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code>.</li>
+</ol>
+
+<p>To change the position of a page in the list, just drag it up or down to where you want it.</p>
+
+<p>The rest of the operations are accessible through the context menu invoked by a right-click over the required page name.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-pagesplaceholder.png" height="auto"><source src="/public/interface-pages65.mp4" type="video/mp4" /></video>
+
+<p>There is also a special type of a page - the Components page. For details, read <a href="https://lunacy.docs.icons8.com/components/#components-page" target="_blank">here</a>.</p>
+
+<h2 id="layer-list">Layer list</h2>
+
+<p>The Layer List appears in left panel when you click the <strong>Layers</strong> content tab. It shows a tree of layers available on the current page. Lunacy automatically assigns names to layers and layer groups as you create them, but you can rename them if you like. The figure below shows a view of a Layer List.</p>
+
+<embed type="image/svg+xml" alt="Layers List" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/TlrJs4Jv70GRRU_UWxQ1pw.svg" class="is-big" />
+
+<p>If the names of layers in the list appear truncated, you can change the width of the panel as shown below.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="" poster="/public/interface-resizeleft.png" height="auto"><source src="/public/interface-resizeleft65.mp4" type="video/mp4" /></video>
+
+<p>The operations that you can perform in the layers list include:</p>
+
+<ul>
+  <li><strong>Selecting layers</strong>. To select a layer or layer group, click its name in the Layer List. As you do it, the selection frame appears around the layer on the canvas. To select multiple items hold down the <code class="language-plaintext highlighter-rouge">Ctrl</code> or <code class="language-plaintext highlighter-rouge">Shift</code> keys and click.</li>
+  <li><strong>Searching for layers</strong>. To quickly find the required layer start typing its name in the search field above the Layer List.</li>
+  <li><strong>Arranging layers</strong>. You can change the order of layers in the list by dragging them up or down.</li>
+  <li><strong>Hiding layers</strong>. You can temporarily hide the selected item from the canvas. You can hide layers, layer groups or individual items within layer groups. Select the item in the list and click the eye icon that will appear next to its name. You can also hide layers by using the <code class="language-plaintext highlighter-rouge">Ctrl+H</code> shortcut or the respective command on the context menu.</li>
+  <li><strong>Locking layers</strong>. By locking layers you can protect them from accidental edits. You cannot select a locked layer on the canvas. But you still can select it through the Layer List and edit its properties in the Inspector. You can also lock grouped layers or individual layers within a group. Select the layer in the list and click the padlock icon that will appear next to its name. You can also lock layers by using the <code class="language-plaintext highlighter-rouge">Ctrl+L</code> shortcut or the respective command on the context menu.</li>
+  <li>Other <a href="#the-context-menu">basic operations</a> with layers available on the context menu.</li>
+</ul>
+
+<!--
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-objectlistplaceholder.png" height="auto"><source src="/public/interface-objectlist61.mp4" type="video/mp4"></video>
+
+-->
+
+<p>To collapse all branches in the Layer List tree use the <code class="language-plaintext highlighter-rouge">Ctrl + ~</code> shortcut.</p>
+
+<div class="callout callout--info">
+    <p><strong>Tip:</strong> Some projects, such as design systems, can house hundreds of layers on a single page. To quickly locate the required layer on the canvas, find it by typing its name in the search field, select it in the layers list and then press <code style="background: white">Ctrl + 2</code> (Fit to selection).</p>
+    <p>For more tips and tricks, click <a href="https://lunacy.docs.icons8.com/tips/" target="_blank">here</a>.</p>
+</div>
+
+<!--
+**Tip:** Some projects, such as design systems, can house hundreds of layers on a single page. To quickly locate the required layer on the canvas, find it by typing its name in the search field, select it in the Layer List and then press `Ctrl + 2` (Fit to selection).
+
+-->
+
+<h2 id="the-canvas"><a href="#the-canvas">The Canvas</a></h2>
+
+<p>The canvas is your working area. It has no boundaries, so you can add layers wherever you want. But if you need to observe certain frames you can add <a href="#artboards">artboards</a> to the canvas. Also, you can toggle on and off the display of <a href="#rulers-and-guides">rulers</a> and <a href="#grids">grids</a> on the canvas.</p>
+
+<h3 id="moving-around-the-canvas">Moving around the canvas</h3>
+
+<p>If your design takes a lot of space and does not fit the screen, you can use the scroll bars located on the right side and at the bottom of the screen.</p>
+
+<p>Also, you can use the mouse wheel for scrolling the canvas. Just point the cursor anywhere over the canvas and rotate the wheel to scroll vertically. To scroll horizontally, hold down the <code class="language-plaintext highlighter-rouge">Shift</code> key and rotate the mouse wheel.</p>
+
+<p>Another option to navigate the canvas is to hold down the <code class="language-plaintext highlighter-rouge">Space</code> key (the cursor will turn into a palm) and drag the canvas to where you need.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-movingcanvas.png" height="auto"><source src="/public/interface-movingcanvas65.mp4" type="video/mp4" /></video>
+
+<p>Also, read about the <a href="#zooming-options">zooming options</a>.</p>
+
+<h3 id="artboards"><a href="#artboards">Artboards</a></h3>
+
+<p>Artboards are a special type of layers that lets you  divide the canvas into separate areas with different content. Artboards are optional but they come in handy when you’re designing for a certain screen size or device. To create an artboard, use the <a href="https://lunacy.docs.icons8.com/tools/#artboard-tool" target="_blank">artboard tool</a>. In fact, it is the tool that Lunacy enables first when you create a new document. It allows you to create a custom size artboard or to select an option from the list that will appear on the right. This list features presets for popular devices, screen resolutions and social media templates (you can also add your custom presets to this list, see <a href="#adding-custom-presets">below</a>).</p>
+
+<p>To add an artboard:</p>
+
+<ol>
+  <li>Select the artboard tool on the toolbar or press <code class="language-plaintext highlighter-rouge">A</code>.</li>
+  <li>Click and drag to create a custom size artboard or select an option from the panel on the right (see the figure below).</li>
+</ol>
+
+<embed type="image/svg+xml" alt="Artboards " src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/TRpyYZFvgUyuxKR8MzWR9Q.svg" class="is-big" />
+
+<p>But even if you started your project without artboards, it is never too late to add them. Just drag the artboard tool over the layers that you want to put on an artboard.</p>
+
+<p>The figure below shows how artboards appear in the Layer List and a view of the Inspector with artboard settings and controls which differ a lot from those available in the <a href="#the-inspector">Inspector</a> panels of other layer types.</p>
+
+<embed type="image/svg+xml" alt="Artboards Create" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/OVBe70GtwUqoerEuoDf3WA.svg" class="is-big" />
+
+<p>The table below provides a description of Inspector elements displayed for artboards.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 270px;">Inspector element</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/public/interface-artbinspector1.png" alt="Size controls" /></td>
+      <td><b>Preset sizes and orientation</b><p>Use these controls to select the size of the artboard from one of the presets and change its orientation. The <b>Resize to Fit</b> button changes the size of an artboard to the size of the selection frame that you get when you select all layers on the given artboard.</p></td>
+    </tr>
+    <tr>
+      <td><img src="/public/interface-artbinspector2.png" alt="Position and dimension controls" /></td>
+      <td><b>Position and size</b><p>The <b>X</b> and <b>Y</b> controls show and allow you to manage the absolute position of the artboard on the canvas.</p> <p> The <b>W</b> and <b>H</b> controls, show and allow to change the width and height of the layer. Click the links button, if you want to preserve aspect ratio when changing the size of the artboard.</p></td>
+    </tr>
+    <tr>
+      <td><img src="/public/interface-artbinspector3.png" alt="Adjust content on resize" /></td>
+      <td><b>Adjust content on resize</b><p>With this checkbox selected, when you change the size of the artboard, Lunacy will proportionally change the size of the layers on it. Read also about resizing constraints.</p></td>
+    </tr>
+    <tr>
+      <td><img src="/public/interface-artbinspector4.png" alt="Artboard background" /></td>
+      <td><b>Artboard background</b><p>Use these controls to change the color and opacity of the artboard. Also, you can clear the <b>Include in export</b> checkbox, if you don't want to include the artboard into export results. In such a case, Lunacy will export only the layers available on the artboard.</p></td>
+    </tr>
+    <tr>
+      <td><img src="/public/interface-artbinspector5.png" alt="Layout grid settings" /></td>
+      <td><b>Layout grid settings</b><p>This group of controls allows you to configure the settings of the layout grid. For details about layout grids, read <a href="https://lunacy.docs.icons8.com/interface/#layout-grid">here</a>.</p></td>
+    </tr>
+    <tr>
+      <td><img src="/public/interface-artbinspector6.png" alt="Export controls" /></td>
+      <td><b>Export controls</b><p>Allow you to export the artboard and its content. For details about export in Lunacy, click <a href="https://lunacy.docs.icons8.com/export" target="_blank">here</a>.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="selecting-and-moving-artboards">Selecting and moving artboards</h4>
+
+<p>To select an empty artboard, you can click anywhere within the artboard. To select an artboard with layers on it, click the artboard’s name.</p>
+
+<p>Similarly, to move an empty artboard, click anywhere within the artboard and drag it to where you want it. To move an artboard with layers, click the artboard’s name and drag.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-moveartplaceholder.png" height="auto"><source src="/public/interface-moveart.mp4" type="video/mp4" /></video>
+
+<p>Alternatively, you can select the required artboard by clicking its name in the Layer List.</p>
+
+<h4 id="adding-custom-presets"><a href="#adding-custom-presets">Adding custom presets</a></h4>
+
+<p>To add a custom artboard to presets:</p>
+
+<ol>
+  <li>Select the artboard tool on the toolbar or press <code class="language-plaintext highlighter-rouge">A</code>. The panel of artboard presets appears on the right.</li>
+  <li>At the bottom of the panel, click the <strong>Create custom preset</strong> button. Scroll the panel down if you don’t see the button.</li>
+  <li>In the displayed dialog box, define the preset name and its dimensions in pixels.</li>
+  <li>Click <strong>Save</strong>. The group <strong>Custom</strong> appears in the panel of presets (see the figure below).</li>
+</ol>
+
+<embed type="image/svg+xml" alt="Custom Preset" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/LVbUeACRzUG6RL4YUuUxBw.svg" />
+
+<h3 id="rulers-and-guides"><a href="#rulers-and-guides">Rulers and guides</a></h3>
+
+<p>Ruler and guides will help you position and align layers on the canvas. In Lunacy, rulers are enabled by default. They appear at the top and on the left side of the canvas. The default and the only measurement unit is pixels. To toggle the rulers off/on, use the <code class="language-plaintext highlighter-rouge">Ctrl+R</code> shortcut or do it through the menu bar (<strong>View</strong> &gt; <strong>Rulers</strong>).</p>
+
+<p>To create a guide, click anywhere on a ruler and drag the guide onto the canvas to where you need it. Now you can position layers along the guide. Move a layer close to the guide and note how it will snap to the guide.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-guides.png" height="auto"><source src="/public/inteface-guides61.mp4" type="video/mp4" /></video>
+
+<p>To relocate a guide, just drag it to another position or select it and use arrow keys to nudge it. If you don’t need a guide, click to select it (hold down <code class="language-plaintext highlighter-rouge">Shift</code> to select multiple guides) and press <code class="language-plaintext highlighter-rouge">Delete</code>. Also, you can use the options from the pop-up menu invoked by a right-click over a ruler (see the figure below).</p>
+
+<embed type="image/svg+xml" alt="Rulers" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/U8yim8DMH0a1ZkV3tKsEfA.svg" />
+
+<h3 id="grids"><a href="#grids">Grids</a></h3>
+
+<p>There are two types of grids: square grid and layout grids. If necessary, you can display both of them at the same time.</p>
+
+<h4 id="square-grid"><a href="#square-grid">Square grid</a></h4>
+
+<p>If there no artboards on the canvas, Lunacy displays the square grid directly on the canvas (to enable it, just click the <strong>Show grid</strong> button on the action bar). Otherwise, you can toggle on/off the display of the grid:</p>
+
+<ul>
+  <li>For all artboards available on the canvas. For this, deselect all artboards and layers on the canvas (click over an empty area on the canvas or press <code class="language-plaintext highlighter-rouge">Esc</code>) and click the <strong>Show grid</strong> button on the action bar.</li>
+  <li>Individually for each artboard. For this, select the required artboard or an layer on it and click the <strong>Show grid</strong> button on the action bar.</li>
+</ul>
+
+<p>To select the size of the grid cell, click the down arrowhead next to the button and choose one of the presets or define your custom size.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/interface-sqgridplaceholder.png" height="auto"><source src="/public/interface-sqgrid.mp4" type="video/mp4" /></video>
+
+<h4 id="layout-grid"><a href="#layout-grid">Layout grid</a></h4>
+
+<p>You can apply layout grids only to <a href="#artboards">artboards</a>. If you have several artboards on a page, you can toggle on and off the display of layout grids for all or individually for each artboard. Also, each artboard can have its own settings of the layout grid (see the demo below).</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/interface-layoutgridplaceholder.png" height="auto"><source src="/public/interface-layoutgridvid.mp4" type="video/mp4" /></video>
+
+<h3 id="measuring">Measuring</h3>
+
+<h4 id="independent-layers">Independent layers</h4>
+
+<p>To learn the distance between two layers on the canvas:</p>
+
+<ol>
+  <li>Select the first layer.</li>
+  <li>Hover the cursor over the other layer.</li>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Alt</code> (<code class="language-plaintext highlighter-rouge">⌥</code>).</li>
+</ol>
+
+<p>To learn the distance between an layer and the borders of the artboard:</p>
+
+<ul>
+  <li>
+    <p>Hover the cursor over the layer, then press and hold <code class="language-plaintext highlighter-rouge">Alt</code> (<code class="language-plaintext highlighter-rouge">⌥</code>).</p>
+
+    <p>OR</p>
+  </li>
+  <li>
+    <p>Select a layer, then hover the cursor over an empty area within the artboard and press and hold <code class="language-plaintext highlighter-rouge">Alt</code> (<code class="language-plaintext highlighter-rouge">⌥</code>).</p>
+  </li>
+</ul>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-measuringplaceholder.png" height="auto"><source src="/public/interface-measuring.mp4" type="video/mp4" /></video>
+
+<p>For precise positioning of layers on the artboard or relative one another, proceed as follows:</p>
+
+<ol>
+  <li>Select one of the layers.</li>
+  <li>Point the cursor over an empty area or over the other layer.</li>
+  <li>Holding down <code class="language-plaintext highlighter-rouge">Alt</code>(<code class="language-plaintext highlighter-rouge">⌥</code>), move the selected layer using the arrow keys.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-groupmeasure3ph.png" height="auto"><source src="/public/interface-groupmeasure3.mp4" type="video/mp4" /></video>
+
+<h4 id="grouped-layers">Grouped layers</h4>
+
+<p>To measure the distance between a grouped layer and another layer (or grouped layer) or between a grouped layer and the borders of the artboard, proceed as described in the previous subsection.</p>
+
+<p>To learn the distance between a member of a group and the borders of the group:</p>
+
+<ol>
+  <li>Point the cursor over the required group member.</li>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Ctrl + Alt</code> (<code class="language-plaintext highlighter-rouge">⌘ ⌥</code>).</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-groupmeasure1ph.png" height="auto"><source src="/public/interface-groupmeasure1.mp4" type="video/mp4" /></video>
+
+<p>To learn the distance between a member of a group and the borders of the artboard:</p>
+
+<ol>
+  <li>Select the group member.</li>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Alt</code> (<code class="language-plaintext highlighter-rouge">⌥</code>).</li>
+  <li>Point the cursor anywhere beyond other group members.</li>
+</ol>
+
+<p>To learn the distance between a member of a group and another member of the group or another layer (group):</p>
+
+<ol>
+  <li>Select the first group member.</li>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Alt</code>(<code class="language-plaintext highlighter-rouge">⌥</code>).</li>
+  <li>Point the cursor over the second group member/layer(group).</li>
+</ol>
+
+<p>To learn the distance between a member of a group and a member of another group:</p>
+
+<ol>
+  <li>Select the first group member.</li>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Ctrl+Alt</code> (<code class="language-plaintext highlighter-rouge">⌘ ⌥</code>).</li>
+  <li>Point the cursor over the member of the other group.</li>
+</ol>
+
+<p>The next demo shows the above three procedures.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-groupmeasure2ph.png" height="auto"><source src="/public/interface-groupmeasure2.mp4" type="video/mp4" /></video>
+
+<h3 id="zooming-options">Zooming options</h3>
+
+<p>The easiest way to zoom to a layer in Lunacy is to hold down the <code class="language-plaintext highlighter-rouge">Ctrl</code>(<code class="language-plaintext highlighter-rouge">⌘</code>) key and rotate the mouse wheel. Similarly, you can hold down <code class="language-plaintext highlighter-rouge">Ctrl</code> and <code class="language-plaintext highlighter-rouge">Shift</code> (<code class="language-plaintext highlighter-rouge">⌘ Shift</code>) keys. In such a case the speed of zooming will be slower (see the demo below).</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-zoomtoobjectplaceholder.png" height="auto"><source src="/public/interface-zoomtoobject61.mp4" type="video/mp4" /></video>
+
+<p>For your convenience, when the zoom value exceeds 500, Lunacy starts displaying the pixel grid. There are two ways to disable this feature:</p>
+
+<ol>
+  <li>Through the menu (<strong>View</strong> &gt; <strong>Pixel grid</strong>).</li>
+  <li>Deselect all layers on the canvas and clear the <strong>Show pixel grid</strong> checkbox that will appear in the Inspector.</li>
+</ol>
+
+<p>For information about other zooming options, read below.</p>
+
+<h4 id="the-zoom-tool">The Zoom tool</h4>
+<p>The Zoom tool enables you to zoom in the selected layer or canvas area. To use the tool:</p>
+
+<ol>
+  <li>Press and hold <code class="language-plaintext highlighter-rouge">Z</code>.</li>
+  <li>Click the layer you want to zoom in or drag over the required area (the smaller the area is, the higher the resulting zoom value will be).</li>
+  <li>To zoom out, hold down <code class="language-plaintext highlighter-rouge">Z+Alt</code> and click or drag over the layer or area.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/tool-zoomplaceholder.png" height="auto"><source src="/public/tool-zoom61.mp4" type="video/mp4" /></video>
+
+<h4 id="the-zoom-control">The Zoom control</h4>
+
+<p>The zoom control is found on the right of the file tab panel. To change the zoom value, you can:</p>
+
+<ul>
+  <li>Enter the zoom value manually in the edit field.</li>
+  <li>Hover the cursor over the zoom control edit field, wait a moment until the cursor turns into a double-headed arrow and then drag the cursor up or down.</li>
+  <li>Click over the edit field of the zoom control and rotate the mouse wheel.</li>
+</ul>
+
+<p>The demo below shows all these three methods.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-zoomtoobjectplaceholder.png" height="auto"><source src="/public/interface-zoomctrl61.mp4" type="video/mp4" /></video>
+
+<p>Alternatively, you can click the down arrowhead next to the zoom control and select one of the preset values or options on the displayed menu (see the figure below).</p>
+
+<embed type="image/svg+xml" alt="Zoom" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/OxheNRo5pkiyNtsF3_IaLQ.svg" />
+
+<p>The table below explains the options on the menu.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Description</th>
+      <th style="width: 160px;">Keyboard shortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Zoom in/out</td>
+      <td>Zooms the canvas in/out.</td>
+      <td><code>+/-</code> or <p><code>Ctrl + "+/-"</code></p></td>
+    </tr>
+    <tr>
+      <td>Zoom to 100%</td>
+      <td>Sets the zoom value to 100%.</td>
+      <td><code>Ctrl + 0</code></td>
+    </tr>
+    <tr>
+      <td>Zoom to All Layers</td>
+      <td>Shows all the layers available on the page.</td>
+      <td><code>Ctrl + 1</code></td>
+    </tr>
+    <tr>
+      <td>Zoom to Selection</td>
+      <td>Zooms in and displays the selected layer in the center of the screen.</td>
+      <td><code>Ctrl + 2</code></td>
+    </tr>
+    <tr>
+      <td>Zoom to fit width</td>
+      <td>Zooms the canvas so that all the horizontally distributed layers fit the screen and you don't have to scroll the screen to the sides.</td>
+      <td><code>Ctrl + 3</code></td>
+    </tr>
+    <tr>
+      <td>Zoom to fit height</td>
+      <td>Zooms the canvas so that all the vertically distributed layers fit the screen and you don't have to scroll the screen up or down.</td>
+      <td><code>Ctrl + 4</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The above options are also accessible through the <strong>View</strong> menu, see the figure below.</p>
+
+<embed type="image/svg+xml" alt="Zoom 2" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/ulk_sB-ZfEehRxkxtYuZ4w.svg" />
+
+<!--
+
+Also, for zooming and focusing you can use the <a href="https://lunacy.docs.icons8.com/tools/#zoom-tool" target="_blank">zoom tool</a>.
+
+-->
+
+<h4 id="show-pixels-on-zoom"><a href="#show-pixels-on-zoom">Show pixels on zoom</a></h4>
+
+<p>By default, Lunacy displays canvas in the vector mode. It means that all layers (except for rasters) will look perfect on the screen irrespective of the zoom value. But if you need to see individual pixels, you can use the <em>show pixels on zoom</em> feature. It enables the display of pixels when the zoom value exceeds 100. The figure below shows a view of the same layer with the feature disabled (left) and enabled (right).</p>
+
+<embed type="image/svg+xml" alt="Show pixels on Zoom" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/n94M7z7YrUudVeF56mTAdw.svg" />
+
+<p>To toggle on/off the pixel mode, use the <strong>Show pixels on zoom</strong> button (<img src="public/interface-pixelbtn.png" alt="Show pixels on zoom button" />) or do it through the menu bar (<strong>View</strong> &gt; <strong>Pixels on Zoom</strong>).</p>
+
+<h3 id="changing-the-canvas-color">Changing the canvas color</h3>
+
+<p>There are two ways to change the color of the canvas:</p>
+
+<p><strong>Way 1</strong></p>
+
+<ol>
+  <li>Deselect all the layers on the canvas.</li>
+  <li>Use the <strong>Workspace color</strong> control that will appear in the Inspector.</li>
+</ol>
+
+<p><strong>Way 2</strong></p>
+
+<ol>
+  <li>Deselect all the layers on the canvas.</li>
+  <li>Select the <a href="https://lunacy.docs.icons8.com/tools/#eyedropper-tool" target="_blank">eyedropper tool</a>.</li>
+  <li>Use the pallets that will appear in the left panel to select the new color.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/interface-canvascolorplaceholder.png" height="auto"><source src="/public/interface-canvascolor1356x730.mp4" type="video/mp4" /></video>
+
+<h2 id="the-inspector"><a href="#the-inspector">The Inspector</a></h2>
+
+<p>The Inspector is the panel that appears on the right of the Lunacy interface. When you create a new document, the first thing you see on the right is not yet the Inspector but the panel of presets of the <a href="https://lunacy.docs.icons8.com/tools/#artboard-tool" target="_blank">artboard tool</a>. Lunacy enables it by default upon creation of a new document. And only you add an artboard or add and select another layer, the Property Inspector appears.</p>
+
+<p>The set of controls and settings displayed in the Inspector varies with the type of layer that you select on the canvas. Below is a description of Inspector elements common for almost all layer types.</p>
+
+<table>
+    <thead>
+        <tr>
+        <th style="width: 270px;">Inspector element</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><img src="/public/interface-alignctrl.png" alt="Alignment and distribution controls" /></td>
+        <td><b>Alignment and distribution controls</b>. Become available when you select two or more layers.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-opacity.png" alt="Opacity and blend mode settings" /></td>
+        <td><b>Opacity and blend mode settings</b>. Allow you to set the overall opacity of a layer and its blending mode.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-positionctrl2.png" alt="Layer properties controls" /></td>
+        <td><b>Layer properties controls</b>. Allow you to adjust the position and size of the layer, as well as its rotation angle, corner radius and number of vertices in stars and polygons. The set of displayed controls varies with the selected layer.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-resizectrl.png" alt="Resizing constraints" /></td>
+        <td><b>Resizing constraints</b>. Appear when you select two or more layers, a group of layers or a layer on an artboard. Serve to determine the behavior of layers upon resizing.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-protoctrl.png" alt="Prototyping controls" /></td>
+        <td>The <b>Prototyping</b> section features the settings related to prototyping.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-appear.png" alt="Appearance section" /></td>
+        <td>The <b>Appearance</b> section allows you to apply <a href="https://lunacy.docs.icons8.com/layerstyles" target="_blank">styles</a> to the selected layer.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-stylingctrl.png" alt="Styling options" /></td>
+        <td><b>Styling options</b>. For details, read <a href="https://lunacy.docs.icons8.com/styling" target="_blank">here</a>.</td>
+        </tr>
+        <tr>
+        <td><img src="/public/interface-exportctrl.png" alt="Export settings" /></td>
+        <td><b>Export settings</b>. For details, read <a href="https://lunacy.docs.icons8.com/export" target="_blank">here</a>.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>When you select no layer on the canvas, the Inspector shows the following controls.</p>
+
+<ul>
+  <li><strong>Workspace color</strong>: Allows you to change the color of the canvas.</li>
+  <li><strong>Show pixel grid</strong>: Toggles on/off the display of the pixel grid when the zoom value exceeds 500.</li>
+  <li><strong>Export project</strong>: Allows you to export the whole project. For details, read <a href="https://lunacy.docs.icons8.com/export" target="_blank">here</a>.</li>
+</ul>
+
+<embed type="image/svg+xml" alt="Select no layer on the canvas" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/YJSPtecCHkq9Lh22lNc1sw.svg" />
+
+<p>If you need more space, you can toggle on/off the display of the Inspector panel through the menu bar (<strong>View</strong> &gt; <strong>Inspector</strong>).</p>
+
+<h3 id="tips-on-working-with-the-inspector"><a href="#tips-on-working-with-the-inspector">Tips on working with the Inspector</a></h3>
+
+<p>There are several ways to change values in the numeric fields of the Inspector. You can:</p>
+
+<ul>
+  <li>Enter the new value manually (press <code class="language-plaintext highlighter-rouge">Enter</code> to submit).</li>
+  <li>Click over the required field and rotate the mouse wheel to gradually increase or decrease the value.</li>
+  <li>Hover the cursor over the required field, wait a moment until the cursor turns into a double-headed arrow and then drag the cursor up or down.</li>
+  <li>Use math (press <code class="language-plaintext highlighter-rouge">Enter</code> to submit).</li>
+</ul>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/interface-inspectortipsplaceholder.png" height="auto"><source src="/public/interface-inspectortips.mp4" type="video/mp4" /></video>
+
+<h2 id="the-context-menu"><a href="#the-context-menu">The context menu</a></h2>
+
+<p>The context menu is a pop-up list of commands and options for basic operations with layers. It appears when you right-click a layer on the canvas. The set of items available on the context menu might slightly vary. It depends on the type of layer that you right-click. Also, next to each item, the context menu shows respective shortcuts that you can use when you become more confident with Lunacy (see the figure below).</p>
+
+<embed type="image/svg+xml" alt="The context menu" src="https://cdn-eu.icons8.com/docs/M9n6bSgrBEaWHOHZwLkY3A/wdcgLwXeIkuEy9ev-2y6qA.svg" />
+
+<p>The table below gives an overview of context menu commands and options common for almost all layer types.</p>
+
+<table>
+  <thead>
+      <tr>
+        <th>Menu option</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><b>Bring Forward</b></td>
+        <td>Moves the layer one step up.</td>
+      </tr>
+      <tr>
+        <td><b>Bring to Front</b></td>
+        <td>Moves the layer to the very top.</td>
+      </tr>
+      <tr>
+        <td><b>Send Backward</b></td>
+        <td>Moves the layer one step down.</td>
+      </tr>
+      <tr>
+        <td><b>Send to Back</b></td>
+        <td>Moves the layer to the very bottom.</td>
+      </tr>
+      <tr>
+        <td><b>Group Selection</b></td>
+        <td>Groups two or more selected layers together. For details about grouping layers, read <a href="https://lunacy.docs.icons8.com/layers/#grouping-layers" target="_blank">here</a>.</td>
+      </tr>
+      <tr>
+        <td><b>Ungroup</b></td>
+        <td>Splits the selected group into separate layers.</td>
+      </tr>
+      <tr>
+        <td><b>Lock</b></td>
+        <td>Locks the layer from accidental edits. For details, read <a href="https://lunacy.docs.icons8.com/interface/#layer-list">here</a>.</td>
+      </tr>
+      <tr>
+        <td><b>Hide</b></td>
+        <td>Temporarily hides the layer from the canvas. For details, read <a href="https://lunacy.docs.icons8.com/interface/#layer-list">here</a>.</td>
+      </tr>
+      <tr>
+        <td><b>Rename</b></td>
+        <td>Allows you to rename the selection right on the canvas or in the Layer List.</td>
+      </tr>
+      <tr>
+        <td><b>Copy/Paste</b></td>
+        <td>Opens a submenu with copying/pasting options. For details, read <a href="https://lunacy.docs.icons8.com/layers/#copy-and-paste-options" target="_blank">here</a>.</td>
+      </tr>
+      <tr>
+        <td><b>Duplicate</b></td>
+        <td>Creates a duplicate of the selected layer. For details, read <a href="https://lunacy.docs.icons8.com/layers/#duplicating-layers" target="_blank">here</a>.</td>
+      </tr>
+      <tr>
+        <td><b>Delete</b></td>
+        <td>Deletes the selected layer.</td>
+      </tr>
+  </tbody>
+</table>
+
+<p>When you right-click an empty area on the canvas or an artboard, the only command available on the context menu will be <strong>Paste here</strong>. The point where you right-click is the place where Lunacy will place the top-left selection handle of the layer you paste.</p>
+
+							
+							<div class="page-nav">
+								
+								<a href="/sysreq" class="page-nav__item page-nav__item--prev">
+									<span>←</span>
+									<span class="page-nav__text">System requirements</span>
+								</a>
+								
+								
+								<a href="/clouddocs" class="page-nav__item page-nav__item--next">
+									<span class="page-nav__text">Cloud documents</span>
+									<span>→</span>
+								</a>
+								
+							</div>
+							
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.section -->
+		
+		
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <button class="btn--back-top">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.812103 6L8.80383e-07 5.16164L5 4.37114e-07L10 5.16164L9.1879 6L5 1.67671L0.812103 6Z" fill="white"/>
+                    </svg>                    
+                    Back to top
+                </button> 
+            </div>
+        </div>
+    </div>
+    <div class="footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Design Assets</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li><a href="https://icons8.com/icons" class="not-visibly">Icons</a></li>
+                        <li><a href="https://photos.icons8.com/" class="not-visibly">Stock photos</a></li>
+                        <li data-v-6c9aea26=""><a href="https://generated.photos/" data-v-6c9aea26="" class="not-visibly">AI-generated faces</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/illustrations" data-v-6c9aea26="" class="not-visibly">Vector illustrations</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/music" data-v-6c9aea26="" class="not-visibly">Royalty-free music</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/emoji" data-v-6c9aea26="" class="not-visibly mark mark--new">Emoji</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Apps</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/lunacy" data-v-6c9aea26="" class="not-visibly">Lunacy</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/app" data-v-6c9aea26="" class="not-visibly">Pichon icons</a></li>
+                        <li data-v-6c9aea26=""><a href="https://photos.icons8.com/creator" data-v-6c9aea26="" class="not-visibly mark mark--new">Photo Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/vector-creator/" data-v-6c9aea26="" class="not-visibly mark mark--new">Vector Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/upscaler" data-v-6c9aea26="" class="not-visibly mark mark--new"> Smart Upscaler</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">About icons8</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/about" data-v-6c9aea26=""  class="not-visibly">In short</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/our-business-model/" data-v-6c9aea26="" class="not-visibly">Business model</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/advertising" data-v-6c9aea26="" class="not-visibly">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Community</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li class="social">
+                            <a href="https://www.pinterest.com/visualpharm/" aria-label="pinterest" class="not-visibly" data-v-6c9aea26=""><svg viewBox="0 0 24 24" width="16" height="16" data-v-6c9aea26=""><path d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.linkedin.com/company/icons8-llc" aria-label="linkedin" class="not-visibly" data-v-6c9aea26=""><svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" data-v-6c9aea26=""><path d="M3 13V3.85185H0V13H3Z" data-v-6c9aea26=""></path><path d="M1.5 0C0.6 0 0 0.515185 0 1.18926C0 1.86333 0.6 2.40741 1.5 2.40741C2.44 2.40741 3 1.86333 3 1.18926C2.965 0.515185 2.4 0 1.5 0Z" data-v-6c9aea26=""></path><path d="M11 13H14V7.82889C14 5.1663 12.39 3.85185 10.405 3.85185C8.465 3.85185 7.5 5.08444 7.5 5.08444V3.85185H4.5V13H7.5V8.18519C7.5 7.23185 8 6.24 9.21 6.24H9.25C10.5 6.25926 11 7.22222 11 8.18519V13Z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://twitter.com/icons_8" aria-label="twitter" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="12" viewBox="0 0 15 12" data-v-6c9aea26=""><path d="M15 1.42a6.42 6.42 0 0 1-1.77.48A3.06 3.06 0 0 0 14.59.22a6.34 6.34 0 0 1-1.96.73 3.1 3.1 0 0 0-2.25-.96A3.06 3.06 0 0 0 7.3 3.03a3.17 3.17 0 0 0 .08.69A8.8 8.8 0 0 1 1.04.55a2.95 2.95 0 0 0-.42 1.53A3.01 3.01 0 0 0 1.99 4.6 3.2 3.2 0 0 1 .6 4.22v.04a3.05 3.05 0 0 0 2.47 2.97 3.12 3.12 0 0 1-.82.1 2.63 2.63 0 0 1-.57-.05 3.08 3.08 0 0 0 2.87 2.11 6.24 6.24 0 0 1-3.82 1.29 6 6 0 0 1-.74-.04A8.8 8.8 0 0 0 4.71 12a8.62 8.62 0 0 0 8.76-8.62l-.01-.4A5.86 5.86 0 0 0 15 1.42" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.facebook.com/Icons8" aria-label="facebook" class="not-visibly" data-v-6c9aea26=""><svg width="6" height="13" viewBox="0 0 6 13" data-v-6c9aea26=""><path d="M4.27 13H1.6V6.5H0V4.34h1.6V3.02c0-1.81.54-3.01 2.64-3.01h1.63v2.16h-.98c-.82 0-.87.4-.87.97v1.2h1.97L5.76 6.5H4.27V13z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://dribbble.com/icons8" aria-label="dribbble" class="not-visibly" data-v-6c9aea26=""><svg width="13" height="13" viewBox="0 0 13 13" data-v-6c9aea26=""><path d="M8.45 7.45a7.55 7.55 0 0 1 1.4-.14 8.56 8.56 0 0 1 1.96.25 5.43 5.43 0 0 1-2.56 3.6 19.3 19.3 0 0 0-.8-3.71zm-5.14 3.46a7.98 7.98 0 0 1 4.09-3.2 17.66 17.66 0 0 1 .8 3.94 4.9 4.9 0 0 1-1.71.26 5.7 5.7 0 0 1-3.18-1zM8.09 6.4c-.13-.29-.24-.6-.38-.89a14.02 14.02 0 0 0 3.25-2.06 5.53 5.53 0 0 1 .96 3.04 8.46 8.46 0 0 0-2.07-.29 10 10 0 0 0-1.76.2zm2.16-3.8a11.71 11.71 0 0 1-3 1.91 21.57 21.57 0 0 0-2.16-3.22 5.1 5.1 0 0 1 1.4-.2 5.47 5.47 0 0 1 3.76 1.51zm-4 2.31a12.57 12.57 0 0 1-4.4.78h-.74a5.58 5.58 0 0 1 2.89-4 17.83 17.83 0 0 1 2.25 3.22zM6.49 0a6.5 6.5 0 1 0 6.52 6.49A6.48 6.48 0 0 0 6.49 0zm.56 6.69a8.74 8.74 0 0 0-4.54 3.47 5.08 5.08 0 0 1-1.42-3.4c.27 0 .51.04.76.04a14.2 14.2 0 0 0 4.86-.89 4.85 4.85 0 0 0 .34.78z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://uxplanet.org/@icons8" aria-label="medium" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="13" viewBox="0 0 15 13" data-v-6c9aea26=""><path d="M15 12.48a.43.43 0 0 1-.44.48.9.9 0 0 1-.39-.11l-.65-.33-2.88-1.48L15 3.79v8.69zM5.71 8.52V3.81l3.21 6.36-2.88-1.48zM9.49.68l.27-.43a.48.48 0 0 1 .56-.23.35.35 0 0 1 .09.04l4.53 2.31a.01.01 0 0 1 .01.01.07.07 0 0 1 .02.07l-4.51 7.5-.46.76-2.98-5.9zM5 12.48a.44.44 0 0 1-.41.52.63.63 0 0 1-.28-.08L.42 10.93a.86.86 0 0 1-.42-.69V.48A.35.35 0 0 1 .33.07a.42.42 0 0 1 .23.06L.69.2l4.29 2.19a.04.04 0 0 1 .02.02v10.07z" data-v-6c9aea26=""></path></svg></a>
+                        </li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/blog/" data-v-6c9aea26="" class="not-visibly">Blog</a></li>
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com/" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://www.producthunt.com/@icons_8" data-v-6c9aea26="" class="not-visibly">Product Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Request</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/icons/request-icon" data-v-6c9aea26="" class="not-visibly">Icon</a></li>
+                        <li data-v-6c9aea26=""><a href="https://request.icons8.com/photo-request" data-v-6c9aea26="" class="not-visibly">Photo shoot</a></li>
+                        <li data-v-6c9aea26=""><a href="https://lunatics.icons8.com" data-v-6c9aea26="" class="not-visibly">Lunacy feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">For Developers</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://developers.icons8.com/docs/getting-started" data-v-6c9aea26="" class="not-visibly">API documentation</a></li>
+                        <li data-v-6c9aea26=""><a href="https://img.icons8.com" data-v-6c9aea26="" class="not-visibly">Omg-Img</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Support</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.crisp.help/en/" data-v-6c9aea26="" class="not-visibly">FAQ</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/contact" data-v-6c9aea26="" class="not-visibly">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Licenses</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/license" data-v-6c9aea26="" class="not-visibly">Free license</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/pricing" data-v-6c9aea26="" class="not-visibly mark mark--upgrade">Paid license</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <span class="footer__bottom__copywriting">© 2018 Icons8 LLC</span>
+                <a href="#" class="not-visibly">Privacy Policy</a>
+                <a href="#" class="not-visibly">Terms and Conditions</a>
+                <a href="#" class="not-visibly">Accelerated by KeyCDN</a>
+                <span class="footer__bottom__link">
+                    
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.modal.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/lunr.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/simplebar.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/search-modal.js"></script>
+
+
+
+	</body>
+</html>

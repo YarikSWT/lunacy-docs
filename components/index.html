@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Components</title>
+
+	<meta name="description" content="Explore the power of Lunacy by learning how to use components">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-64.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-96.png"/>
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/jquery.modal.min.css">
+
+	</head>
+	<body class="blue">
+		
+	<header class="site-header">
+		<div class="container-fluid">
+			<div class="row">
+				
+					<a href="https://icons8.com/lunacy" class="site-header__logo">
+						<img src="/doks-theme/assets/images/layout/logo.svg">
+					</a>
+				
+				<div id="mobile-menu" class="site-header__wrapper">
+					
+					<ul class="site-header__nav normalize" data-da>
+						
+							
+								<li><a href="/" class="not-visibly">Documentation</a></li>
+							
+						
+							
+								<li><a href="https://lunatics.icons8.com/" class="not-visibly">Request Features</a></li>
+							
+						
+							
+								<li><a href="/release-notes/" class="not-visibly">Release Notes</a></li>
+							
+						
+							
+								<li><a href="https://community.icons8.com/c/lunacy/" class="not-visibly">Forum</a></li>
+							
+						
+					</ul>
+					
+					<div class="site-header__buttons">
+						<a href="#" class="btn--language not-visibly"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.00033 1.16699C5.09928 1.16699 3.41206 2.08714 2.34619 3.50033H2.33366V3.51628C1.60446 4.49006 1.16699 5.69388 1.16699 7.00033C1.16699 10.2151 3.78557 12.8337 7.00033 12.8337C10.2151 12.8337 12.8337 10.2151 12.8337 7.00033C12.8337 3.78557 10.2151 1.16699 7.00033 1.16699ZM8.75033 2.67432C10.4625 3.36462 11.667 5.03604 11.667 7.00033C11.667 8.21823 11.2007 9.32101 10.4411 10.1506C10.2918 9.67823 9.85549 9.33366 9.33366 9.33366H8.75033V7.58366C8.75033 7.26166 8.48899 7.00033 8.16699 7.00033H5.25033V5.83366H5.83366C6.15566 5.83366 6.41699 5.57233 6.41699 5.25033V4.08366H7.58366C8.22824 4.08366 8.75033 3.56158 8.75033 2.91699V2.67432ZM2.45443 5.95443L3.50033 7.00033L5.25033 8.75033V9.33366C5.25033 9.97824 5.77241 10.5003 6.41699 10.5003V11.6271C4.11036 11.341 2.33366 9.38654 2.33366 7.00033C2.33366 6.63994 2.37771 6.29101 2.45443 5.95443Z" fill="black"/>
+							</svg>EN
+						</a>
+						<a href="https://icons8.com/lunacy" class="btn btn--blue">Download</a>
+						<a href="#" style="display: none;" class="btn">Sign In</a>
+					</div>
+				</div>
+				<div id="site-header-burger" class="site-header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="micro-nav-header menu-disable  page-menu ">
+	
+		<span>Components / </span><span class="js-subheader"></span>
+	
+	<div class="arrow"></div>
+</div>
+<ul id="micro-nav" class="normalize micro-nav  ">
+	<li>
+		<div class="search">
+    <div class="search__container">
+        <button class="search__button" id="site_search">
+            <img src="/doks-theme/assets/images/layout/search.svg">
+            Search...
+        </button>
+    </div>
+</div>
+
+<div class="search-modal" id="search-modal">
+    <div class="search-bar" id="search-bar">
+    </div>
+    <div class="search-results" id="search-results">
+    </div>
+    <div id="powered-by"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+	</li>
+	
+	
+	<li><a href="/about" class="not-visibly">About Lunacy</a></li>
+	
+	<li><a href="/sysreq" class="not-visibly">System requirements</a></li>
+	
+	<li><a href="/interface" class="not-visibly">Interface</a></li>
+	
+	<li><a href="/clouddocs" class="not-visibly">Cloud documents</a></li>
+	
+	<li><a href="/tools" class="not-visibly">Tools</a></li>
+	
+	<li><a href="/layers" class="not-visibly">Layers</a></li>
+	
+	<li><a href="/editing" class="not-visibly">Editing shapes</a></li>
+	
+	<li><a href="/text" class="not-visibly">Text</a></li>
+	
+	<li><a href="/styling" class="not-visibly">Styling</a></li>
+	
+	<li><a href="/components" class="not-visibly">Components</a></li>
+	
+	<li><a href="/layerstyles/" class="not-visibly">Layer and text styles</a></li>
+	
+	<li><a href="/libraries" class="not-visibly">Libraries</a></li>
+	
+	<li><a href="/images" class="not-visibly">Images</a></li>
+	
+	<li><a href="/export" class="not-visibly">Export</a></li>
+	
+	<li><a href="/prototyping" class="not-visibly">Prototyping</a></li>
+	
+	<li><a href="/linked_design" class="not-visibly">Linked design</a></li>
+	
+	<li><a href="/teams" class="not-visibly">Teams</a></li>
+	
+	<li><a href="/comments" class="not-visibly">Comments</a></li>
+	
+	<li><a href="/tips" class="not-visibly">Tips and Tricks</a></li>
+	
+	<li><a href="/shortcuts" class="not-visibly">Shortcuts</a></li>
+	
+	<li><a href="/localization" class="not-visibly">Localization</a></li>
+	
+	<li><a href="/support" class="not-visibly">FAQ and Сontacts</a></li>
+	
+	<li><a href="/release-notes" class="not-visibly">Release History</a></li>
+	
+	<li class="suggest--github"><a href="https://github.com/icons8/lunacy-docs" class="btn btn--suggest-edit"><i class="icon icon--github"></i>Suggest edits</a></li>
+	
+	
+</ul>
+
+
+					</div>
+					<div class="col-lg-9">
+						<div id="content" class="content">
+							<h2 class="content__title">Components</h2>
+							<p class="subtitle content__desc">Explore the power of Lunacy by learning how to use components</p>
+							<p><strong>Components</strong> are reusable layers or groups of layers that make your designs consistent and your life easier.</p>
+
+<p>When working with components you should understand the idea of <strong>main components</strong> and <strong>component instances</strong>. For example, when you are designing a UI, you can create a button component (that will be a main component) and then add identical buttons (component instances) wherever you need them with just a click. If you later decide to change the size, shape or the color of your buttons, you’ll need to modify only the main component, and the changes will immediately apply to all the instances.
+Moreover, you can also change the text on one or even all instances. That will be an <strong>override</strong>. We will discuss overrides later in this section.</p>
+
+<p>The demo below demonstrates the effect and efficiency of using components in designs.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/symbols-demo65ph.png" height="auto"><source src="/public/symbols-demo65.mp4" type="video/mp4" /></video>
+
+<h2 id="creating-components"><a href="#creating-components">Creating components</a></h2>
+
+<p>Select a layer and perform one of the following actions:</p>
+
+<ul>
+  <li>Click the plus icon in the components panel.</li>
+  <li>Click the add component icon on the tool bar at the top of the window.</li>
+  <li>Right-click and select <strong>Create component</strong> on the displayed menu.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Ctrl</code> + <code class="language-plaintext highlighter-rouge">Alt</code> + <code class="language-plaintext highlighter-rouge">K</code>, if you prefer shortcuts.</li>
+</ul>
+
+<p>The <strong>New component</strong> dialog box appears.</p>
+
+<p><img src="public/addsymbol65.png" alt="Creating a component. Step 1" /></p>
+
+<p>In the <strong>New component</strong> dialog box, define the name of the component and select the page where you will store your components and click OK.</p>
+
+<p><img src="public/addsymbol-dialog65.png" alt="Creating a component. Step 2" /></p>
+
+<h2 id="components-page"><a href="#components-page">Components page</a></h2>
+
+<p>You should store all your components on a separate page apart from designs. When you create your first component within a project, Lunacy will offer you to save it to the default page named <strong>Components</strong>. This page will be added to the project automatically.</p>
+
+<p><img src="public/symbolspage65.png" alt="Components page" /></p>
+
+<p>You can opt to select any other page but make sure that the primary intent of such page will be storing components.</p>
+
+<p>For this, right-click the required page above the Layer List and select <strong>Set as Components page</strong> on the displayed menu.</p>
+
+<p><img src="public/symbolspage-set65.png" alt="Selecting another components page" /></p>
+
+<p>From now on, when you add new components, the <strong>New component</strong> dialog box will in the first place offer this page for saving components to.</p>
+
+<h2 id="organizing-components"><a href="#organizing-components">Organizing components</a></h2>
+
+<p>As your project and the number of components in it grows, you will definitely face the need of organizing components into categories similar to those shown in the figure below.</p>
+
+<p><img src="public/orgcomp65.png" alt="Component categories, how to name components" /></p>
+
+<p>To divide your components into categories, consider the following format of component names:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Category name / Subcategory name / Component name</code></p>
+
+<p>For example, to organize your button components, you can give them the following names:</p>
+
+<ul>
+  <li>Button / Normal</li>
+  <li>Button / Hovered</li>
+  <li>etc.</li>
+</ul>
+
+<p><img src="public/orgcomp65-2.png" alt="Component categories" /></p>
+
+<p>You don’t need to manually create categories and subcategories. Lunacy will show them automatically based on component names. The number of nesting levels for subcategories is not limited. See also <a href="#component-states">component states</a>.</p>
+
+<p>To rename a component:</p>
+
+<ol>
+  <li>Switch to the <strong>Components</strong> tab on the left.</li>
+  <li>In the <strong>Components</strong> panel, right-click the component and select <strong>Rename</strong> on the displayed menu or use  <code class="language-plaintext highlighter-rouge">F2</code> as a shortcut.</li>
+  <li>Enter the new name and click <code class="language-plaintext highlighter-rouge">Enter</code>.</li>
+</ol>
+
+<p>Also you can also rename components through the Layer List when you are on the <strong>Component</strong> page.</p>
+
+<h2 id="component-states"><a href="#component-states">Component states</a></h2>
+
+<p>Components populating the same category or subcategory are called component states. A typical example, is a toggle element that can be on or off. Or think of a button that can be pressed, hovered, disabled, etc. So, you can create several states of a component and then quickly switch between them through the Inspector as needed.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Select a component instance.</li>
+  <li>In the <strong>Component</strong> section of the Inspector, click the arrowhead to unfold the menu.</li>
+  <li>On the menu, select the required component state.</li>
+</ol>
+
+<p><img src="public/components-states.png" alt="Switching between component states" /></p>
+
+<p>See also <a href="#replacing-instances">replacing instances</a>.</p>
+
+<h2 id="viewing-components-in-the-components-panel">Viewing components in the Components panel</h2>
+
+<p>There are two display modes for components in the <strong>Components</strong> panel:</p>
+
+<ul>
+  <li>List mode: Shows more of your components library structure along with small previews of the components themselves.</li>
+  <li>Grid mode: Shows larger component icons but it is less obvious from the library structure point of view, especially when the number of components in a category is large. It shows all the components from all the subcategories within a category.</li>
+</ul>
+
+<p>To switch between the modes, click the <strong>Show as List/Show as Grid</strong> button at the upper-left corner of the <strong>Components</strong> panel.</p>
+
+<p>To view a larger preview of a component, hover the cursor over the component icon for a moment.</p>
+
+<p>To unfold/fold the content of all component categories, right-click anywhere over the category list and select <strong>Expand All/Collapse All</strong> on the displayed menu.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/components-panelph.png" height="auto"><source src="/public/components-panel.mp4" type="video/mp4" /></video>
+
+<p>Also, to quickly find the required component, you can type its name in the search field at the top of the <strong>Component</strong> panel.</p>
+
+<h2 id="main-components">Main components</h2>
+
+<p>As it was mentioned earlier, you should keep main components on a dedicated page.  In this section, you will learn other details of working with main components.</p>
+
+<p>The first thing you should note is that names of main components appear in bold in the Layer List. Also, all component names, of both main component and instances, come with the component icon (<img src="public/symbolicon.png" alt="Component icon" />) By clicking the name of a main component, you can unfold it to see its content.</p>
+
+<p>The figure below shows a view of a primitive main component, which includes an automatically added component artboard with the name of the component at the top and a group of layers.</p>
+
+<p><img src="public/master_unfold65.png" alt="A view of a main component" /></p>
+
+<p>The intent of component artboards is twofold:</p>
+
+<ul>
+  <li>To provide full compatibility with the native .sketch files.</li>
+  <li>To determine the layer behavior during resizing.</li>
+</ul>
+
+<p>You can choose to include or not to include the artboard fill into instances of a component. For this:</p>
+
+<ol>
+  <li>On the <strong>Layers</strong> tab, open the components page.</li>
+  <li>Click the component name in the list of layers.</li>
+  <li>In the Inspector, enable the artboard fill checkbox.</li>
+  <li>Select/clear the <strong>Include in instances</strong> checkbox.</li>
+</ol>
+
+<p><img src="public/includeinstance65.png" alt="A view of a main component" /></p>
+
+<h3 id="editing-main-components">Editing main components</h3>
+
+<p>There are two ways to edit a main component:</p>
+
+<ol>
+  <li>In the component editor (the quick one).</li>
+  <li>Directly on the Component page.</li>
+</ol>
+
+<p><strong>Way 1</strong></p>
+
+<ol>
+  <li>
+    <p>Double-click an instance of the component you want to edit.</p>
+
+    <p>OR</p>
+
+    <p>Select an instance of the component you want to edit. Then press <code class="language-plaintext highlighter-rouge">Enter</code> or click the <strong>Edit main component</strong> button (<img src="public/symbols-editsymbolbtn.png" alt="Edit master component button" />) on the context toolbar.</p>
+
+    <p>This enables the component editor. The main component appears over the selected instance. The Layer List displays the list of the component components. The rest of the canvas becomes dimmed.</p>
+  </li>
+  <li>Edit the component in the same way as any other layer/layer group. You can change its size, color, text or any other properties using the set of tools in the Inspector.</li>
+  <li>To exit the editor, do one of the following:
+    <ul>
+      <li>Click <img src="public/symbols-editsymbolbtn.png" alt="Edit main component button" /> on the context tool bar.</li>
+      <li>Click anywhere over the dimmed area.</li>
+      <li>Press <code class="language-plaintext highlighter-rouge">Esc</code>.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The changes you make immediately apply to all the component instances across the project (see the demo below), except for the instances with respective overrides.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/symbols-editmasterph.png" height="auto"><source src="/public/symbols-editmaster65.mp4" type="video/mp4" /></video>
+
+<p><strong>Way 2</strong></p>
+
+<ol>
+  <li>
+    <p>Right-click an instance (on the canvas or in the Layer List) of the component you want to edit and select <strong>Go to Main Component</strong> on the context menu. The <strong>Components</strong> page opens with the required component selected.</p>
+
+    <p>OR</p>
+
+    <p>Go to the <a href="#components-page">Components page</a>, find and select the required component.</p>
+  </li>
+  <li>Edit the component in the same way as any other layer/layer group. You can change its size, color, text or any other properties using the set of tools in the Inspector.</li>
+  <li>
+    <p>When you are through with editing:</p>
+
+    <ul>
+      <li>If you used the <strong>Go to Main Component</strong> command, click the <strong>Back to instance</strong> button that will appear in the top-left corner of the canvas.</li>
+      <li>If you chose to manually open the <strong>Components</strong> page, just switch to the required page, to continue working with the project.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="deleting-main-components">Deleting main components</h3>
+
+<p>To delete a main component, you should either do it from the <strong>Components</strong> tab or from the <strong>Components</strong> page.
+Note that deletion of a main component turns all its instances into groups.</p>
+
+<h2 id="component-instances">Component instances</h2>
+
+<p>Instances are copies of components that you use across your project.
+In the Layer List, components instances are displayed with the component icon in front of their names. Their names appear in regular type (while main components are displayed in bold) and have the following name format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;Component name&gt; instance</code></p>
+
+<p>Click the name of an instance to extend it. The nodes inside an instance are override nodes, that show the elements that you can modify for this component instance only.  For details about overrides, click <a href="#overrides">here</a>.</p>
+
+<p>The figure below shows a view of a component (top) and the way it appears in the Layer List and a view of an instance of this component (bottom).</p>
+
+<p><img src="public/symbplusinst65.png" alt="A view of a component and its instance" /></p>
+
+<p>As you can see, the component node includes the text and the rectangle layers. You can change both these layers:</p>
+
+<ul>
+  <li>The wording and its properties: font size, color, alignment, etc.</li>
+  <li>The rectangle properties: size, color, shades, etc.</li>
+</ul>
+
+<p>As for the instance, you can change only the wording (that will be an override) but cannot change typography properties.</p>
+
+<h3 id="adding-instances-to-the-canvas">Adding instances to the canvas</h3>
+
+<p>To add an instance to a project page:</p>
+
+<ol>
+  <li>Switch to the <strong>Components</strong> tab.</li>
+  <li>Find the required component.</li>
+  <li>
+    <p>Drag the component to where you want it.</p>
+
+    <p>OR</p>
+
+    <p>Click the <strong>Paste to workspace</strong> icon at the left of the component block, if you are in the list view mode, or just click the component when in the grid view mode. This will add the component instance to the center of the visible canvas.</p>
+  </li>
+</ol>
+
+<p>Also, you can hold down the <code class="language-plaintext highlighter-rouge">Ctrl</code> or <code class="language-plaintext highlighter-rouge">Shift</code> key, select and then drop several component instances on the canvas at a time.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/components-addinstph.png" height="auto"><source src="/public/components-addinst.mp4" type="video/mp4" /></video>
+
+<h3 id="replacing-instances"><a href="#replacing-instances">Replacing instances</a></h3>
+
+<p>There are two ways to replace an instance on the canvas.</p>
+
+<p><strong>Way 1.</strong></p>
+
+<ol>
+  <li>Select the component instance you want to replace.</li>
+  <li>Find the new component in the components panel.</li>
+  <li>
+    <p>If you are in the list view mode, click the replacement icon on the component block.</p>
+
+    <p>OR</p>
+
+    <p>If you are in the grid view mode, just click the component.</p>
+  </li>
+</ol>
+
+<p><img src="public/components-replaceinst65.png" alt="Replacing component instances" /></p>
+
+<p><strong>Way 2</strong></p>
+
+<ol>
+  <li>Select the component instance you want to replace.</li>
+  <li>In the <strong>Component</strong> section of the Inspector panel, click the down arrowhead to unfold the menu.</li>
+  <li>Use the menu to find and select the replacement component.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/components-replaceinst65-way2ph.png" height="auto"><source src="/public/components-replaceinst65-way2.mp4" type="video/mp4" /></video>
+
+<p>The menu features the following sections:</p>
+
+<ul>
+  <li><strong>Commands</strong>: Shows the list of component-related commands. Click <a href="#component-related-commands">here</a> for details.</li>
+  <li><strong>Related</strong>: Shows the components that share the same category/subcategory with the selected component instance.</li>
+  <li><strong>Categories</strong>: Shows the list of available component categories. You can click through the categories and subcategories to find the required component. For your convenience, the category and subcategories to which the selected component instance belong will have a dot next their names (see the gif below). For details about how to organize components, read <a href="#organizing-components">here</a>.</li>
+  <li><strong>UI kits</strong>: Shows the list of external UI kits from where you can also select a replacement. For details about UI kits, click <a href="https://lunacy.docs.icons8.com/libraries/#ui-kits" target="_blank">here</a>.</li>
+</ul>
+
+<div class="callout callout--info">
+    <p><strong>Tip:</strong> The size of the menu depends on the number of components and component categories in your document. If you don't see the content of the upper or lower menu sections in full, use the scroll.</p>
+    <p>For more tips and tricks, click <a href="https://lunacy.docs.icons8.com/tips/" target="_blank">here</a>.</p>
+</div>
+
+<!--
+
+**Tip:** The size of the menu depends on the number of components and component categories in your project. If you don't see the content of the upper or lower menu sections in full, use the scroll.
+
+-->
+
+<h2 id="component-related-commands"><a href="#component-related-commands">Component-related commands</a></h2>
+
+<p>The figure below shows menu commands that you can use when working with component instances.</p>
+
+<p>To access them,  first select a component instance and then open the menu in the Inspector or click <strong>Layer</strong> on the menu bar at the top of the window. Also, you can right-click the required component instance to invoke the context menu.</p>
+
+<p class="is-big"><img src="public/components-menucommands.png" alt="Component-related commands" /></p>
+
+<p>The commands are as follows:</p>
+
+<!--
+
+| Command | Description | Shortcut (Windows, Linux) | Shortcut (macOS) |
+| --- | --- | --- | --- |
+| Create Component | Creates a new component. Optionally, you can use the **Create component** button which appears at the top of the window (see the figure above). | `Ctrl+Alt+K` | `⌥⌘K` |
+| Create New Component State | Creates a new [component state](https://lunacy.docs.icons8.com/components/#component-states). | `Ctrl+Alt+S` | `⌥⌘S` |
+| Go to Main Component | Brings you to the main component of the selected instance. To return to the instance from the main component, click the **Back to instance** button that will appear in the top-left corner of the canvas. | `Ctrl+Alt+E` | `⌥⌘E` |
+| Detach from Components | When you detach an instance from its main component, it becomes a group. All further changes to the main component will no longer apply to its ex-instance. | `Ctrl+Alt+D` | `⌥⌘D` |
+| Detach from Library | This command applies only to components from external files, i.e. to components from UI kits. Detached components become document components and appear on the **Components** tab and the [Components page](https://lunacy.docs.icons8.com/components/#components-page). For more information about UI kits, click [here](https://lunacy.docs.icons8.com/libraries/#ui-kits). | `-` | `-` |
+| Reset Instance Size | By using this command you can at any moment restore the original size of any component instance. | `Ctrl+Alt+R` | `⌥⌘R` |
+| Reset Overrides | Use this command to undo all overrides and restore the initial look of an instance. For this, you can also use the reset overrides button that appears in the **Component** section of the Inspector panel, after an override takes place. | `-` | `-` |
+| Send to Component page | This command applies only to main components and becomes available only when a component is not on a dedicated components page. | `-` | `-` |
+| Convert Component to Artboard | This command applies only to main components. It converts the selected main component into an artboard with a group of objects. All the instances of the component convert into groups. | `Ctrl+Shift+Y` | `⌘ShiftY` |
+| Organize Components | A click over this command opens the components panel, where you can organize components as described [here](https://lunacy.docs.icons8.com/components/#organizing-components). | `-` | `-` |
+
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+      <th>Shortcut (Windows, Linux)</th>
+      <th style="width: 170px;">Shortcut (macOS)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create Component</td>
+      <td>Creates a new component. Optionally, you can use the <b>Create component</b> button which appears at the top of the window (see the figure above).</td>
+      <td><code>Ctrl+Alt+K</code></td>
+      <td><code>⌥ ⌘ K</code></td>
+    </tr>
+    <tr>
+      <td>Create New Component State</td>
+      <td>Creates a new <a href="https://lunacy.docs.icons8.com/components/#component-states">component state</a>.</td>
+      <td><code>Ctrl+Alt+S</code></td>
+      <td><code>⌥ ⌘ S</code></td>
+    </tr>
+    <tr>
+      <td>Go to Main Component</td>
+      <td>Brings you to the main component of the selected instance. To return to the instance from the main component, click the <b>Back to instance</b> button that will appear in the top-left corner of the canvas.</td>
+      <td><code>Ctrl+Alt+E</code></td>
+      <td><code>⌥ ⌘ E</code></td>
+    </tr>
+    <tr>
+      <td>Detach from Components</td>
+      <td>When you detach an instance from its main component, it becomes a group. All further changes to the main component will no longer apply to its ex-instance.</td>
+      <td><code>Ctrl+Alt+D</code></td>
+      <td><code>⌥ ⌘ D</code></td>
+    </tr>
+    <tr>
+      <td>Detach from Library</td>
+      <td>This command applies only to components from external files, i.e. to components from UI kits. Detached components become document components and appear on the <b>Components</b> tab and the <a href="https://lunacy.docs.icons8.com/components/#components-page">Components page</a>. For more information about UI kits, click <a href="https://lunacy.docs.icons8.com/libraries/#ui-kits" target="_blank">here</a>.</td>
+      <td><code>-</code></td>
+      <td><code>-</code></td>
+    </tr>
+    <tr>
+      <td>Reset Instance Size</td>
+      <td>By using this command you can at any moment restore the original size of any component instance.</td>
+      <td><code>Ctrl+Alt+R</code></td>
+      <td><code>⌥ ⌘ R</code></td>
+    </tr>
+    <tr>
+      <td>Reset Overrides</td>
+      <td>Use this command to undo all overrides and restore the initial look of an instance. For this, you can also use the reset overrides button that appears in the <b>Component</b> section of the Inspector panel, after an override takes place.</td>
+      <td><code>-</code></td>
+      <td><code>-</code></td>
+    </tr>
+    <tr>
+      <td>Send to Component page</td>
+      <td>This command applies only to main components and becomes available only when a component is not on a dedicated components page.</td>
+      <td><code>-</code></td>
+      <td><code>-</code></td>
+    </tr>
+    <tr>
+      <td>Convert Component to Artboard</td>
+      <td>This command applies only to main components. It converts the selected main component into an artboard with a group of layers. All the instances of the component convert into groups.</td>
+      <td><code>Ctrl+Shift+Y</code></td>
+      <td><code>⌘ Shift Y</code></td>
+    </tr>
+    <tr>
+      <td>Organize Components</td>
+      <td>A click over this command opens the components panel, where you can organize components as described <a href="https://lunacy.docs.icons8.com/components/#organizing-components">here</a>.</td>
+      <td><code>-</code></td>
+      <td><code>-</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="nested-components">Nested Components</h2>
+
+<p>Until now we’ve been considering  only primitive components. But you can also create complex components with other components inside. That will be nested components. And that is nested components that will become real time savers for your projects.</p>
+
+<h2 id="overrides"><a href="#overrides">Overrides</a></h2>
+
+<p>Overrides are changes that you can make to a specific component instance not affecting the main component and other instances of this component across the project.</p>
+
+<p>Currently, Lunacy provides the following types of overrides:</p>
+
+<ul>
+  <li>Image overrides</li>
+  <li>Text overrides</li>
+  <li>Nested component overrides</li>
+  <li>Layer style overrides</li>
+  <li>Text style overrides</li>
+  <li>Hotspot overrides</li>
+  <li>Tint overrides</li>
+</ul>
+
+<h2 id="understanding-overrides">Understanding overrides</h2>
+
+<p>This mini tutorial will help you better understand the idea and the power of overrides. Also, you will learn how to use some of the advanced Lunacy features.</p>
+
+<p>Let’s assume that we are designing a contact UI. We have prepared two templates: light and dark. In the figure below, they are on the right. The figure is a screenshot of the components page of the project. These two templates are complex components that include several individual components shown to the left of the templates. Once an individual component becomes a part of a complex component, we call it a nested component.</p>
+
+<p class="is-big"><img src="public/symb-tutorial1.png" alt="A view of the components page" /></p>
+
+<blockquote>
+  <p><strong>Note:</strong> To demonstrate Lunacy capabilities to the maximum, we have also added some layer and text styles. For details about them, click <a href="https://lunacy.docs.icons8.com/layerstyles/" target="_blank">here</a>.</p>
+</blockquote>
+
+<p>Now, we’ll move from the components page to our project page, add one of the templates to the artboard and see the power of components in action.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/components-tutorialbeginph.png" height="auto"><source src="/public/components-tutorialbegin.mp4" type="video/mp4" /></video>
+
+<h3 id="image-overrides">Image overrides</h3>
+
+<p>Our template contains two image overrides: the avatar image and the background.</p>
+
+<p>We will replace the avatar first. The procedure is follows:</p>
+
+<ol>
+  <li>Click over the image override on the canvas or select it in the Layer List.</li>
+  <li>In the Inspector, click the <strong>Replace image</strong> button. The <strong>Open</strong> dialog box appears.</li>
+  <li>In the dialog box, select a new image.</li>
+  <li>Click the <strong>Open</strong> button.</li>
+</ol>
+
+<p>Also, you can use the Lunacy photo and image libraries. We will do it for overriding the background image:</p>
+
+<ol>
+  <li>Switch over to the <strong>Photos</strong> tab.</li>
+  <li>Find the image you like.</li>
+  <li>Drop the image onto the override.</li>
+</ol>
+
+<p>The video below shows both methods of overriding images.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/components-imageoverrideph.png" height="auto"><source src="/public/components-imageoverride.mp4" type="video/mp4" /></video>
+
+<h3 id="text-overrides">Text overrides</h3>
+
+<p>To demonstrate text overrides we will change the contact’s name and contact data.</p>
+
+<p><strong>Step 1.</strong></p>
+
+<p>Change the contact’s name:</p>
+
+<ol>
+  <li>Click over the text override on the canvas or select it in the Layer List.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code> or click the <strong>Edit Layer</strong> button on the top bar.</li>
+  <li>Enter the new text.</li>
+  <li>When done, press <code class="language-plaintext highlighter-rouge">Esc</code> to exit the edit mode.</li>
+</ol>
+
+<p><img src="public/components-textoverride1.png" alt="Text override. Step 1" /></p>
+
+<p>In Steps 2 and 3 we will use the text generation and text snippets features.</p>
+
+<p><strong>Step 2.</strong></p>
+
+<p>Add the contact’s phone number:</p>
+
+<ol>
+  <li>Click over the text override on the canvas or select it in the Layer List.</li>
+  <li>On the top bar, click the down arrowhead next to the <strong>Generate text</strong> button, then select <strong>People &gt; Phone</strong>. Use the <code class="language-plaintext highlighter-rouge">Shift + R</code> shortcut to refresh generated content, if needed.</li>
+</ol>
+
+<p><strong>Step 3.</strong></p>
+
+<p>Add the contact’s email:</p>
+
+<ol>
+  <li>Click over the next text override on the canvas or select it in the Layer List.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code> or click the <strong>Edit Layer</strong> button on the top bar to start editing the override.</li>
+  <li>Enter <em>;em</em> and and press <code class="language-plaintext highlighter-rouge">Esc</code>. Lunacy will replace the <em>;em</em> text snippet with a random email address. Use the <code class="language-plaintext highlighter-rouge">Shift + R</code> shortcut to refresh generated content, if needed.</li>
+</ol>
+
+<p>The gif below demonstrates text overrides described in Steps 2 and 3.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/components-textoverrideph.png" height="auto"><source src="/public/components-textoverride.mp4" type="video/mp4" /></video>
+
+<p>For details, about text generation and text snippets, click <a href="https://lunacy.docs.icons8.com/text/#text-generation-and-text-snippets" target="_blank">here</a>.</p>
+
+<h3 id="nested-components-overrides">Nested components overrides</h3>
+
+<p>Now we’ll have a look at how nested components overrides work.</p>
+
+<p><strong>Step 1.</strong></p>
+
+<p>First of all, let’s change the icon in front of the contact’s email address for a more suitable one. To be able to quickly do it, we have prepared a set of icons that we will use across the project, converted them into components and placed them to the same category. For details about how to organize components, read <a href="#organizing-components">here</a>.</p>
+
+<ol>
+  <li>Find and select the icon override in the Layer List or select it on the canvas. The <strong>Component</strong> section appears in the Inspector.</li>
+  <li>In the <strong>Component</strong> section of the Inspector, click the down arrowhead and select the mail icon on the displayed menu.</li>
+</ol>
+
+<p class="is-big"><img src="public/components-nestoverridestep1.png" alt="Nested components override. Step 1" /></p>
+
+<p><strong>Step 2.</strong></p>
+
+<p>At the bottom of our template we have three buttons: one is in the active state, two others are inactive. Let’s show how the button will look when hovered over. For this, we have also created an individual component, which will override the current one.
+The procedure is as follows:</p>
+
+<ol>
+  <li>Find and select the button override in the Layer List or select it on the canvas. The <strong>Component</strong> section appears in the Inspector.</li>
+  <li>In the <strong>Component</strong> section of the Inspector, click the down arrowhead. The menu appears.</li>
+  <li>In the categories section of the menu, navigate to the required component (see the demo below).</li>
+</ol>
+
+<!--
+
+{:.is-big}
+![Text override. Step 2](public/symb-tutorial9.gif)
+
+-->
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/components-nestedoverrideph.png" height="auto"><source src="/public/components-nestedoverride.mp4" type="video/mp4" /></video>
+
+<p>As you might notice, at the end we also made a text override.</p>
+
+<h4 id="none-override">None override</h4>
+
+<p>Also, you can hide a nested component from the template by using the <strong>None override</strong> option.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Find and select the nested component in the Layer List or select it on the canvas. The <strong>Component</strong> section appears in the Inspector.</li>
+  <li>In the <strong>Component</strong> section of the Inspector, click the down arrowhead. The menu appears.</li>
+  <li>In the upper section of the menu, click <strong>No Component</strong>.</li>
+</ol>
+
+<p><img src="public/components-noneover.png" alt="None override 1" /></p>
+
+<p>Lunacy will override the component you selected with the so-called <em>none component</em>. You can always override the none component with any other component.</p>
+
+<p><img src="public/components-noneover2.png" alt="None override 2" /></p>
+
+<h3 id="layer-and-text-style-overrides">Layer and text style overrides</h3>
+
+<p>To demonstrate these two types of overrides, let’s change the layer style of the padding and the text style of the contact name.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Find and select the override in the Layer List or select it on the canvas.</li>
+  <li>Apply the new style from the Inspector or from the <strong>Styles</strong> tab as shown in the demo below.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/components-nestedoverrideph.png" height="auto"><source src="/public/components-stylesoverride.mp4" type="video/mp4" /></video>
+
+<p>Repeat the procedure to override text styles of the phone number and email address.</p>
+
+<h3 id="hotspot-overrides">Hotspot overrides</h3>
+
+<p>If your template features a hotspot, you can override its target artboard. Optionally, you can select the none override option to disable the hotspot.</p>
+
+<h3 id="tint-overrides">Tint overrides</h3>
+
+<p>For details about tint overrides, read <a href="https://lunacy.docs.icons8.com/styling/#tint-overrides" target="_blank">here</a>.</p>
+
+<h2 id="duplicating-components">Duplicating components</h2>
+
+<p>You can duplicate your existing components and quickly create new ones based on their parents.</p>
+
+<p>To duplicate a component:</p>
+
+<ul>
+  <li>
+    <p>Select the component in the left panel or on the canvas and press <code class="language-plaintext highlighter-rouge">Ctrl + D</code>.</p>
+
+    <p>OR</p>
+  </li>
+  <li>
+    <p>Right-click the component in the left panel or on the canvas, then select <strong>Duplicate</strong> on the displayed menu.</p>
+  </li>
+</ul>
+
+							
+							<div class="page-nav">
+								
+								<a href="/styling" class="page-nav__item page-nav__item--prev">
+									<span>←</span>
+									<span class="page-nav__text">Styling</span>
+								</a>
+								
+								
+								<a href="/layerstyles" class="page-nav__item page-nav__item--next">
+									<span class="page-nav__text">Layer and text styles</span>
+									<span>→</span>
+								</a>
+								
+							</div>
+							
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.section -->
+		
+		
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <button class="btn--back-top">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.812103 6L8.80383e-07 5.16164L5 4.37114e-07L10 5.16164L9.1879 6L5 1.67671L0.812103 6Z" fill="white"/>
+                    </svg>                    
+                    Back to top
+                </button> 
+            </div>
+        </div>
+    </div>
+    <div class="footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Design Assets</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li><a href="https://icons8.com/icons" class="not-visibly">Icons</a></li>
+                        <li><a href="https://photos.icons8.com/" class="not-visibly">Stock photos</a></li>
+                        <li data-v-6c9aea26=""><a href="https://generated.photos/" data-v-6c9aea26="" class="not-visibly">AI-generated faces</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/illustrations" data-v-6c9aea26="" class="not-visibly">Vector illustrations</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/music" data-v-6c9aea26="" class="not-visibly">Royalty-free music</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/emoji" data-v-6c9aea26="" class="not-visibly mark mark--new">Emoji</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Apps</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/lunacy" data-v-6c9aea26="" class="not-visibly">Lunacy</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/app" data-v-6c9aea26="" class="not-visibly">Pichon icons</a></li>
+                        <li data-v-6c9aea26=""><a href="https://photos.icons8.com/creator" data-v-6c9aea26="" class="not-visibly mark mark--new">Photo Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/vector-creator/" data-v-6c9aea26="" class="not-visibly mark mark--new">Vector Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/upscaler" data-v-6c9aea26="" class="not-visibly mark mark--new"> Smart Upscaler</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">About icons8</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/about" data-v-6c9aea26=""  class="not-visibly">In short</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/our-business-model/" data-v-6c9aea26="" class="not-visibly">Business model</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/advertising" data-v-6c9aea26="" class="not-visibly">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Community</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li class="social">
+                            <a href="https://www.pinterest.com/visualpharm/" aria-label="pinterest" class="not-visibly" data-v-6c9aea26=""><svg viewBox="0 0 24 24" width="16" height="16" data-v-6c9aea26=""><path d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.linkedin.com/company/icons8-llc" aria-label="linkedin" class="not-visibly" data-v-6c9aea26=""><svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" data-v-6c9aea26=""><path d="M3 13V3.85185H0V13H3Z" data-v-6c9aea26=""></path><path d="M1.5 0C0.6 0 0 0.515185 0 1.18926C0 1.86333 0.6 2.40741 1.5 2.40741C2.44 2.40741 3 1.86333 3 1.18926C2.965 0.515185 2.4 0 1.5 0Z" data-v-6c9aea26=""></path><path d="M11 13H14V7.82889C14 5.1663 12.39 3.85185 10.405 3.85185C8.465 3.85185 7.5 5.08444 7.5 5.08444V3.85185H4.5V13H7.5V8.18519C7.5 7.23185 8 6.24 9.21 6.24H9.25C10.5 6.25926 11 7.22222 11 8.18519V13Z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://twitter.com/icons_8" aria-label="twitter" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="12" viewBox="0 0 15 12" data-v-6c9aea26=""><path d="M15 1.42a6.42 6.42 0 0 1-1.77.48A3.06 3.06 0 0 0 14.59.22a6.34 6.34 0 0 1-1.96.73 3.1 3.1 0 0 0-2.25-.96A3.06 3.06 0 0 0 7.3 3.03a3.17 3.17 0 0 0 .08.69A8.8 8.8 0 0 1 1.04.55a2.95 2.95 0 0 0-.42 1.53A3.01 3.01 0 0 0 1.99 4.6 3.2 3.2 0 0 1 .6 4.22v.04a3.05 3.05 0 0 0 2.47 2.97 3.12 3.12 0 0 1-.82.1 2.63 2.63 0 0 1-.57-.05 3.08 3.08 0 0 0 2.87 2.11 6.24 6.24 0 0 1-3.82 1.29 6 6 0 0 1-.74-.04A8.8 8.8 0 0 0 4.71 12a8.62 8.62 0 0 0 8.76-8.62l-.01-.4A5.86 5.86 0 0 0 15 1.42" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.facebook.com/Icons8" aria-label="facebook" class="not-visibly" data-v-6c9aea26=""><svg width="6" height="13" viewBox="0 0 6 13" data-v-6c9aea26=""><path d="M4.27 13H1.6V6.5H0V4.34h1.6V3.02c0-1.81.54-3.01 2.64-3.01h1.63v2.16h-.98c-.82 0-.87.4-.87.97v1.2h1.97L5.76 6.5H4.27V13z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://dribbble.com/icons8" aria-label="dribbble" class="not-visibly" data-v-6c9aea26=""><svg width="13" height="13" viewBox="0 0 13 13" data-v-6c9aea26=""><path d="M8.45 7.45a7.55 7.55 0 0 1 1.4-.14 8.56 8.56 0 0 1 1.96.25 5.43 5.43 0 0 1-2.56 3.6 19.3 19.3 0 0 0-.8-3.71zm-5.14 3.46a7.98 7.98 0 0 1 4.09-3.2 17.66 17.66 0 0 1 .8 3.94 4.9 4.9 0 0 1-1.71.26 5.7 5.7 0 0 1-3.18-1zM8.09 6.4c-.13-.29-.24-.6-.38-.89a14.02 14.02 0 0 0 3.25-2.06 5.53 5.53 0 0 1 .96 3.04 8.46 8.46 0 0 0-2.07-.29 10 10 0 0 0-1.76.2zm2.16-3.8a11.71 11.71 0 0 1-3 1.91 21.57 21.57 0 0 0-2.16-3.22 5.1 5.1 0 0 1 1.4-.2 5.47 5.47 0 0 1 3.76 1.51zm-4 2.31a12.57 12.57 0 0 1-4.4.78h-.74a5.58 5.58 0 0 1 2.89-4 17.83 17.83 0 0 1 2.25 3.22zM6.49 0a6.5 6.5 0 1 0 6.52 6.49A6.48 6.48 0 0 0 6.49 0zm.56 6.69a8.74 8.74 0 0 0-4.54 3.47 5.08 5.08 0 0 1-1.42-3.4c.27 0 .51.04.76.04a14.2 14.2 0 0 0 4.86-.89 4.85 4.85 0 0 0 .34.78z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://uxplanet.org/@icons8" aria-label="medium" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="13" viewBox="0 0 15 13" data-v-6c9aea26=""><path d="M15 12.48a.43.43 0 0 1-.44.48.9.9 0 0 1-.39-.11l-.65-.33-2.88-1.48L15 3.79v8.69zM5.71 8.52V3.81l3.21 6.36-2.88-1.48zM9.49.68l.27-.43a.48.48 0 0 1 .56-.23.35.35 0 0 1 .09.04l4.53 2.31a.01.01 0 0 1 .01.01.07.07 0 0 1 .02.07l-4.51 7.5-.46.76-2.98-5.9zM5 12.48a.44.44 0 0 1-.41.52.63.63 0 0 1-.28-.08L.42 10.93a.86.86 0 0 1-.42-.69V.48A.35.35 0 0 1 .33.07a.42.42 0 0 1 .23.06L.69.2l4.29 2.19a.04.04 0 0 1 .02.02v10.07z" data-v-6c9aea26=""></path></svg></a>
+                        </li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/blog/" data-v-6c9aea26="" class="not-visibly">Blog</a></li>
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com/" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://www.producthunt.com/@icons_8" data-v-6c9aea26="" class="not-visibly">Product Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Request</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/icons/request-icon" data-v-6c9aea26="" class="not-visibly">Icon</a></li>
+                        <li data-v-6c9aea26=""><a href="https://request.icons8.com/photo-request" data-v-6c9aea26="" class="not-visibly">Photo shoot</a></li>
+                        <li data-v-6c9aea26=""><a href="https://lunatics.icons8.com" data-v-6c9aea26="" class="not-visibly">Lunacy feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">For Developers</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://developers.icons8.com/docs/getting-started" data-v-6c9aea26="" class="not-visibly">API documentation</a></li>
+                        <li data-v-6c9aea26=""><a href="https://img.icons8.com" data-v-6c9aea26="" class="not-visibly">Omg-Img</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Support</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.crisp.help/en/" data-v-6c9aea26="" class="not-visibly">FAQ</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/contact" data-v-6c9aea26="" class="not-visibly">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Licenses</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/license" data-v-6c9aea26="" class="not-visibly">Free license</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/pricing" data-v-6c9aea26="" class="not-visibly mark mark--upgrade">Paid license</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <span class="footer__bottom__copywriting">© 2018 Icons8 LLC</span>
+                <a href="#" class="not-visibly">Privacy Policy</a>
+                <a href="#" class="not-visibly">Terms and Conditions</a>
+                <a href="#" class="not-visibly">Accelerated by KeyCDN</a>
+                <span class="footer__bottom__link">
+                    
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.modal.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/lunr.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/simplebar.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/search-modal.js"></script>
+
+
+
+	</body>
+</html>

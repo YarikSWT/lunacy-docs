@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Styling</title>
+
+	<meta name="description" content="Learn about tools that will help you create your unique style">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-64.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-96.png"/>
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/jquery.modal.min.css">
+
+	</head>
+	<body class="blue">
+		
+	<header class="site-header">
+		<div class="container-fluid">
+			<div class="row">
+				
+					<a href="https://icons8.com/lunacy" class="site-header__logo">
+						<img src="/doks-theme/assets/images/layout/logo.svg">
+					</a>
+				
+				<div id="mobile-menu" class="site-header__wrapper">
+					
+					<ul class="site-header__nav normalize" data-da>
+						
+							
+								<li><a href="/" class="not-visibly">Documentation</a></li>
+							
+						
+							
+								<li><a href="https://lunatics.icons8.com/" class="not-visibly">Request Features</a></li>
+							
+						
+							
+								<li><a href="/release-notes/" class="not-visibly">Release Notes</a></li>
+							
+						
+							
+								<li><a href="https://community.icons8.com/c/lunacy/" class="not-visibly">Forum</a></li>
+							
+						
+					</ul>
+					
+					<div class="site-header__buttons">
+						<a href="#" class="btn--language not-visibly"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.00033 1.16699C5.09928 1.16699 3.41206 2.08714 2.34619 3.50033H2.33366V3.51628C1.60446 4.49006 1.16699 5.69388 1.16699 7.00033C1.16699 10.2151 3.78557 12.8337 7.00033 12.8337C10.2151 12.8337 12.8337 10.2151 12.8337 7.00033C12.8337 3.78557 10.2151 1.16699 7.00033 1.16699ZM8.75033 2.67432C10.4625 3.36462 11.667 5.03604 11.667 7.00033C11.667 8.21823 11.2007 9.32101 10.4411 10.1506C10.2918 9.67823 9.85549 9.33366 9.33366 9.33366H8.75033V7.58366C8.75033 7.26166 8.48899 7.00033 8.16699 7.00033H5.25033V5.83366H5.83366C6.15566 5.83366 6.41699 5.57233 6.41699 5.25033V4.08366H7.58366C8.22824 4.08366 8.75033 3.56158 8.75033 2.91699V2.67432ZM2.45443 5.95443L3.50033 7.00033L5.25033 8.75033V9.33366C5.25033 9.97824 5.77241 10.5003 6.41699 10.5003V11.6271C4.11036 11.341 2.33366 9.38654 2.33366 7.00033C2.33366 6.63994 2.37771 6.29101 2.45443 5.95443Z" fill="black"/>
+							</svg>EN
+						</a>
+						<a href="https://icons8.com/lunacy" class="btn btn--blue">Download</a>
+						<a href="#" style="display: none;" class="btn">Sign In</a>
+					</div>
+				</div>
+				<div id="site-header-burger" class="site-header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="micro-nav-header menu-disable  page-menu ">
+	
+		<span>Styling / </span><span class="js-subheader"></span>
+	
+	<div class="arrow"></div>
+</div>
+<ul id="micro-nav" class="normalize micro-nav  ">
+	<li>
+		<div class="search">
+    <div class="search__container">
+        <button class="search__button" id="site_search">
+            <img src="/doks-theme/assets/images/layout/search.svg">
+            Search...
+        </button>
+    </div>
+</div>
+
+<div class="search-modal" id="search-modal">
+    <div class="search-bar" id="search-bar">
+    </div>
+    <div class="search-results" id="search-results">
+    </div>
+    <div id="powered-by"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+	</li>
+	
+	
+	<li><a href="/about" class="not-visibly">About Lunacy</a></li>
+	
+	<li><a href="/sysreq" class="not-visibly">System requirements</a></li>
+	
+	<li><a href="/interface" class="not-visibly">Interface</a></li>
+	
+	<li><a href="/clouddocs" class="not-visibly">Cloud documents</a></li>
+	
+	<li><a href="/tools" class="not-visibly">Tools</a></li>
+	
+	<li><a href="/layers" class="not-visibly">Layers</a></li>
+	
+	<li><a href="/editing" class="not-visibly">Editing shapes</a></li>
+	
+	<li><a href="/text" class="not-visibly">Text</a></li>
+	
+	<li><a href="/styling" class="not-visibly">Styling</a></li>
+	
+	<li><a href="/components" class="not-visibly">Components</a></li>
+	
+	<li><a href="/layerstyles/" class="not-visibly">Layer and text styles</a></li>
+	
+	<li><a href="/libraries" class="not-visibly">Libraries</a></li>
+	
+	<li><a href="/images" class="not-visibly">Images</a></li>
+	
+	<li><a href="/export" class="not-visibly">Export</a></li>
+	
+	<li><a href="/prototyping" class="not-visibly">Prototyping</a></li>
+	
+	<li><a href="/linked_design" class="not-visibly">Linked design</a></li>
+	
+	<li><a href="/teams" class="not-visibly">Teams</a></li>
+	
+	<li><a href="/comments" class="not-visibly">Comments</a></li>
+	
+	<li><a href="/tips" class="not-visibly">Tips and Tricks</a></li>
+	
+	<li><a href="/shortcuts" class="not-visibly">Shortcuts</a></li>
+	
+	<li><a href="/localization" class="not-visibly">Localization</a></li>
+	
+	<li><a href="/support" class="not-visibly">FAQ and Сontacts</a></li>
+	
+	<li><a href="/release-notes" class="not-visibly">Release History</a></li>
+	
+	<li class="suggest--github"><a href="https://github.com/icons8/lunacy-docs" class="btn btn--suggest-edit"><i class="icon icon--github"></i>Suggest edits</a></li>
+	
+	
+</ul>
+
+
+					</div>
+					<div class="col-lg-9">
+						<div id="content" class="content">
+							<h2 class="content__title">Styling</h2>
+							<p class="subtitle content__desc">Learn about tools that will help you create your unique style</p>
+							<h2 id="introduction">Introduction</h2>
+
+<p>Styling options that you can apply to layers in Lunacy include:</p>
+
+<ul>
+  <li>Fills (solid, gradient and image fills)</li>
+  <li>Borders</li>
+  <li>Outer shadows</li>
+  <li>Inner shadows</li>
+  <li>Blurs (Gaussian and background)</li>
+</ul>
+
+<p>They appear in the Inspector when you select layer. A combination of styling options applied to a layer is called a layer style. You can save layer styles for further use (read <a href="https://lunacy.docs.icons8.com/layerstyles/" target="_blank">here</a> for details).</p>
+
+<p>You can apply styling options to all <a href="https://lunacy.docs.icons8.com/layers/#introduction" target="_blank">types of layers</a>, except for technical ones (such as artboards, hotspots and slices). However, the only option applicable to group layers and components is the outer shadow.</p>
+
+<p>In addition to the above, text layers feature typography settings, such as font, font size, line spacing, etc. Combined with the common styling options (or without them) they make up <a href="https://lunacy.docs.icons8.com/layerstyles/#text-styles" target="_blank">text styles</a>.</p>
+
+<p>The details about using each of the options you will find in the sections below. But first of all let us review some common things.</p>
+
+<h2 id="adding-deleting-and-managing-styling-options">Adding, deleting, and managing styling options</h2>
+
+<p>To apply a fill, border or any other styling to a layer:</p>
+
+<ol>
+  <li>Select the required layer.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">+</code> next to the respective styling section in the Inspector. A row of controls appears.</li>
+  <li>Use these controls to define the required styling parameters (see the demo below).</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-commondemoph1.png" height="auto"><source src="/public/styling-commondemo2.mp4" type="video/mp4" /></video>
+
+<p>The things that you should know:</p>
+
+<ul>
+  <li>
+    <p>Each layer can have multiple styling options of the same type (except for blurs). For instance, you can apply an image fill to a layer and a semi-transparent solid fill on top of it. Also, a layer can have several borders or shadows. Just click the + icon to add another row of settings.</p>
+  </li>
+  <li>
+    <p>You can drag these rows of settings up and down to adjust the position of their instances on the canvas.</p>
+  </li>
+  <li>
+    <p>You can temporarily disable some of the settings, by clicking the eye icon.</p>
+  </li>
+  <li>
+    <p>To delete a row of settings, select it and click the trash icon.</p>
+  </li>
+</ul>
+
+<p>All these things are shown in the next demo. It presents a layer with a single fill and three borders.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-commondemoph2.png" height="auto"><source src="/public/styling-commondemo4.mp4" type="video/mp4" /></video>
+
+<h2 id="color-controls"><a href="#color-controls">Color controls</a></h2>
+
+<p>Color controls appear in all styling sections (except for blurs) and serve for defining the color of the selected layer or its borders or shadows.</p>
+
+<p><img src="public/styling-colorctrl2.png" alt="Opening the color picker" /></p>
+
+<p>You can:</p>
+
+<ul>
+  <li>Click the color box and use the <a href="#color-picker">color picker</a>.</li>
+  <li>Manually enter or paste the HEX value of the required solid fill.</li>
+  <li>Copy the HEX, RGBA, HSB, or HLS value of the current solid fill. For this, right-click over the text box and select the required option on the displayed menu as shown in the figure below.</li>
+</ul>
+
+<p>The last two options do not apply to shadows as they don’t have the color text box.</p>
+
+<p><img src="public/styling-copycode2.png" alt="Copying color code" /></p>
+
+<h2 id="color-picker"><a href="#color-picker">Color picker</a></h2>
+
+<p>To open the color picker, click the color box in the styling section you are working with.</p>
+
+<p><img src="public/styling-colorbox2.png" alt="Opening the color picker" /></p>
+
+<p>The figure below shows a view of the color picker invoked from the fills section.</p>
+
+<p><img src="public/styling-colorpicker2.png" alt="Color picker" /></p>
+
+<p>It features the following controls:</p>
+
+<ol>
+  <li>Fill type buttons. Available on the fill and border color pickers only.</li>
+  <li>Color selection box. That is where you will select colors.</li>
+  <li>The eyedropper tool. For details about using it, read <a href="https://lunacy.docs.icons8.com/tools/#eyedropper-tool" target="_blank">here</a>.</li>
+  <li>Color selection bar. Allows you to quickly navigate through colors.</li>
+  <li>Opacity bar.</li>
+  <li>The color code selector. Displays the code of the currently selected color:
+    <ul>
+      <li><strong>HEX</strong></li>
+      <li><strong>RGB</strong></li>
+      <li><strong>HSB</strong></li>
+      <li><strong>HSL</strong></li>
+    </ul>
+  </li>
+  <li>The color code entry field.</li>
+  <li>The opacity entry field.</li>
+  <li>This button invokes the color variable editing mode.</li>
+  <li>The panel of preset colors. To speed up your work with colors, you can save them for further use and select them directly from this panel. There are two types of preset colors:
+    <ul>
+      <li><strong>Global</strong> colors appear on the color picker in all documents.</li>
+      <li><strong>Document</strong> colors belong only to the current document.</li>
+    </ul>
+
+    <p>To switch between the panels of global and document colors click the panel name. To delete a preset, right-click over it, then select <strong>Remove</strong> on the displayed menu.</p>
+  </li>
+  <li>Use this button to switch the panel of presets between the list and grid view. In the list view, you can give names to colors: right-click a color and select <strong>Rename</strong> on the displayed menu (see the demo below).</li>
+  <li>Use this button to add the currently selected color to <strong>Global</strong> or <strong>Document</strong> presets.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-pickerph1.png" height="auto"><source src="/public/styling-picker1.mp4" type="video/mp4" /></video>
+
+<h2 id="color-variables"><a href="#color-variables">Color variables</a></h2>
+
+<p>Color variables let you efficiently manage colors in your documents and instantly recolor all the layers using the same color variable. You can apply color variables to <a href="#fills">fills</a>, <a href="#borders">borders</a>, and <a href="#shadows">shadows</a>.</p>
+
+<p>In the Inspector, color variables appear as colored circles (<img src="/public/colorvariable_circle.png" alt="color variable icon" />), while regular fills, border and shadow colors appear as colored rectangles (<img src="/public/fill-rectangle.png" alt="regular fill icon" />).</p>
+
+<p>To create a color variable:</p>
+
+<ol>
+  <li>Select a layer.</li>
+  <li>Invoke the Color Picker from the Inspector.</li>
+  <li>Set the required color.</li>
+  <li>Click <strong>Create Color Variable</strong>.</li>
+</ol>
+
+<p>To apply an existing color variable, select a layer, click <img src="/public/4dotsicon.png" alt="4 dots icon" /> in the Inspector, then select the required color variable.</p>
+
+<p>To edit a color variable, click over the colored circle in the Inspector, then click <img src="/public/settingsicon.png" alt="4 dots icon" /> &gt; <strong>Edit variable</strong>.</p>
+
+<p>To detach a layer from a color variable, select the layer, then click <img src="/public/detachicon.png" alt="4 dots icon" /> in the Inspector.</p>
+
+<p><img src="/public/color_variables2.png" alt="Color variables in Lunacy" /></p>
+
+<h2 id="fills"><a href="#fills">Fills</a></h2>
+
+<p>There are three major types of fills:</p>
+
+<ol>
+  <li>Solid fills (default).</li>
+  <li>Gradient fills that can be:
+    <ul>
+      <li>Linear</li>
+      <li>Radial</li>
+      <li>Angular</li>
+    </ul>
+  </li>
+  <li>Image fills.</li>
+</ol>
+
+<p>The figure below shows a view of settings in the <strong>Fills</strong> section.</p>
+
+<p><img src="public/styling-fills2.png" alt="Fill controls" /></p>
+
+<p>The section features the following controls:</p>
+
+<ol>
+  <li>The <a href="#color-controls">color control</a> for setting fills.</li>
+  <li>The opacity control.</li>
+  <li>The blend mode control. Blend modes determine, in case of multiple fills, how the top fill blends with the fill underneath. Understanding blend modes is mainly a matter of practice and experimenting, but if you need some theory, you can read it <a href="https://en.wikipedia.org/wiki/Blend_modes" target="_blank">here</a>.</li>
+  <li>This button opens the panel where you can select between the <em><a href="https://en.wikipedia.org/wiki/Nonzero-rule" target="_blank">Non-Zero</a></em> and <em><a href="https://en.wikipedia.org/wiki/Even–odd_rule" target="_blank">Even-Odd</a></em> options for filling overlapping paths.</li>
+  <li>This button opens a list of <a href="#color-variables">color variables</a>.</li>
+</ol>
+
+<h3 id="solid-fills">Solid fills</h3>
+
+<p>To define a solid fill:</p>
+
+<ul>
+  <li>
+    <p>Click the color box in the color control and use the <a href="#color-picker">color picker</a> to define the required color.</p>
+
+    <p>OR</p>
+  </li>
+  <li>
+    <p>Type or paste the HEX code of the required color in the edit field and press <code class="language-plaintext highlighter-rouge">Enter</code>.</p>
+  </li>
+</ul>
+
+<h3 id="gradients">Gradients</h3>
+
+<p>Gradients are combinations of two or more colors blended into each other within the same fill layer.</p>
+
+<p>To add a gradient fill:</p>
+
+<ol>
+  <li>In the <strong>Fills</strong> section of the Inspector, click the color box. The <a href="#color-picker">color picker</a> appears.</li>
+  <li>
+    <p>At the top of the color picker click one the following buttons (1) to select the gradient type:</p>
+
+    <ul>
+      <li><img src="public/styling-linear.png" alt="Linear gradient button" /> - linear</li>
+      <li><img src="public/styling-linear.png" alt="Radial gradient button" /> - radial</li>
+      <li><img src="public/styling-angular.png" alt="Angular gradient button" /> - angular</li>
+    </ul>
+
+    <p>As you do it, the gradient bar (2) with two handles gets displayed in the color picker. Also, you will see a gradient control with two color points (3) over the layer. The appearance of the gradient control depends on the selected gradient type. The next figure shows a linear gradient (see also the demos below).</p>
+
+    <p><img src="public/styling-colorpickergrad3.png" alt="Gradient controls" /></p>
+  </li>
+  <li>
+    <p>Use the gradient control and/or the gradient bar to get the desired effect. The handles on the gradient bar correspond to color points over the layer. Actions applicable to all types of gradients:</p>
+
+    <ul>
+      <li>To change the color of a color point click it (or its respective handle on the gradient bar), and select the required color in the color selection box (4).</li>
+      <li>To add a color to a gradient, just click over the gradient bar  or the gradient control. To adjust the color position move the handles or color points.</li>
+      <li>To delete a color, point the cursor over the respective color point or handle and press <code class="language-plaintext highlighter-rouge">Del</code>.</li>
+    </ul>
+  </li>
+  <li>(optional) To save a gradient to presets, select the preset type (<em>Global</em> or <em>Document</em>) and click the plus icon.</li>
+  <li>(optional) To invert a gradient use the button (5) next to the gradient bar.</li>
+  <li>Close the color picker when you are done.</li>
+</ol>
+
+<h4 id="linear-gradients">Linear gradients</h4>
+
+<p>The demo below shows what you can do when adding a linear gradient.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-lineargradph2.png" height="auto"><source src="/public/styling-lineargrad2.mp4" type="video/mp4" /></video>
+
+<h4 id="radial-gradients">Radial gradients</h4>
+
+<p>When you select the radial type, the gradient control becomes a radius of a circle. You can:</p>
+
+<ul>
+  <li>Select the edge color point to change the size of the circle.</li>
+  <li>Select the center color point and drag it to reposition the origin of the gradient.</li>
+  <li>Drag the square handles on the edge of the circle to resize or reshape it into an ellipse.</li>
+</ul>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-radialgradph3.png" height="auto"><source src="/public/styling-radialgrad3.mp4" type="video/mp4" /></video>
+
+<h4 id="angular-gradients">Angular gradients</h4>
+
+<p>When you select the angular type, the gradient control takes the form of a circle with color points sitting on its edge. Drag the points around the circle to get the desired gradient. Add some extra color points, if needed.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-angularph2.png" height="auto"><source src="/public/styling-angular2.mp4" type="video/mp4" /></video>
+
+<h3 id="image-fills">Image fills</h3>
+
+<p>To create an image fill:</p>
+
+<ol>
+  <li>Click the color box.</li>
+  <li>In the top bar of the color picker, click <img src="public/styling-imagefillbtn.png" alt="Image fill button" />.</li>
+  <li>Click <strong>Choose image</strong>.</li>
+  <li>In the displayed dialog box, select the required image on your computer and click <strong>Open</strong>. See also the tip below.</li>
+  <li>
+    <p>Use the drop-down list below the <strong>Choose image</strong> button to select the fill method:</p>
+
+    <ul>
+      <li><strong>Fill</strong>. Adjusts the image size to the layer’s width.</li>
+      <li><strong>Fit</strong>. Adjusts the image size  to fit the layer’s height.</li>
+      <li><strong>Stretch</strong>.  Stretches the image for it to fit the layer’s height and width.</li>
+      <li><strong>Tile</strong>. Tiles the image to fit the layer. The size of tiles is adjustable (see the demo below).</li>
+    </ul>
+  </li>
+  <li>Close the color picker, when you are through.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-imagefillph1.png" height="auto"><source src="/public/styling-imagefill2.mp4" type="video/mp4" /></video>
+
+<div class="callout callout--info">
+    <p><strong>Tip:</strong> You can also create an image fill by holding down <b>Ctrl</b> (<b>⌘</b>) and dropping an image from your desktop or from the Lunacy library on to the layer as shown in the demo below.</p> <p>As a matter of fact, what the <a href="https://lunacy.docs.icons8.com/tools/#avatar-tool" target="_blank">avatar tool</a> does is that it creates rounded rectangles with image fills, where images are random photos of people.</p>
+    <p>For more tips and tricks, click <a href="https://lunacy.docs.icons8.com/tips/" target="_blank">here</a>.</p>
+</div>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/styling-addimagefillph.png" height="auto"><source src="/public/styling-addimagefill1.mp4" type="video/mp4" /></video>
+
+<h2 id="borders"><a href="#borders">Borders</a></h2>
+
+<p>As the name of this styling section suggests, here you will manage the appearance of borders in shapes. But it is also the place where you will define the color, thickness and other parameters of lines, curves, arrows and other open paths.</p>
+
+<p>The figure below shows a view of settings in the <strong>Borders</strong> section.</p>
+
+<p><img src="public/styling-borderctrls2.png" alt="Border controls" /></p>
+
+<p>The section features the following controls:</p>
+
+<ol>
+  <li>The <a href="#color-controls">color control</a> for setting border colors. You can apply both solid and gradient fills to borders.</li>
+  <li>The border position control. Available for closed paths (shapes) only. You can choose between the inside, outside or center (default) of the outline. The difference between these options is shown in the figure below. The only option available for open paths (lines, arrows, curves, etc.) is the <em>center</em>.</li>
+  <li>The borders thickness control. Sets the thickness of a border or an open path in pixels.</li>
+  <li>This icon opens the advanced border settings (see the next section).</li>
+</ol>
+
+<p><img src="public/styling-borderdiff3.png" alt="Border position" /></p>
+
+<p class="image-info">From top to bottom: center, inside, and outside borders</p>
+
+<h3 id="advanced-border-settings">Advanced border settings</h3>
+
+<p><img src="public/styling-borderadvanced1.png" alt="Advanced border controls" /></p>
+
+<p>The advanced border settings include:</p>
+
+<ul>
+  <li><strong>Caps</strong>. Use these controls to define the shape of endings of open paths: no endings, round or square (see the demo below). The settings are applicable to paths drawn with the Line, Arrow, and Vector tools.</li>
+  <li><strong>Folds</strong>. Use these controls to adjust the appearance of corners of paths drawn with the Vector tool. Also, they work with arrow heads and tails.</li>
+</ul>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-capsfoldsph1.png" height="auto"><source src="/public/styling-capsfolds1.mp4" type="video/mp4" /></video>
+
+<ul>
+  <li><strong>Head</strong> and <strong>Tail</strong>. Use these controls to define the appearance of endings of open paths drawn with the Line, Arrow, and Vector tools.</li>
+</ul>
+
+<p><img src="public/styling-arrows.png" alt="Heads and tails settings" /></p>
+
+<ul>
+  <li><strong>Dash</strong> and <strong>Gap</strong>. Use these controls to create dashed lines or borders. Define the length of dashes and gaps between them in respective edit boxes. To restore a solid line/border, set all the values to <em>0</em>.</li>
+</ul>
+
+<p><img src="public/styling-dashes1.png" alt="Dashed border" /></p>
+
+<h2 id="effects">Effects</h2>
+
+<p>Use the <strong>Effects</strong> section of the Inspector when you want to add shadows or blurs:</p>
+
+<ol>
+  <li>Click <code class="language-plaintext highlighter-rouge">+</code> next to the section name.</li>
+  <li>From the drop-down lost select the required effect.</li>
+  <li>Click <img src="/public/settingsicon.png" alt="settings icon" /> and set the required values.</li>
+</ol>
+
+<p><img src="public/styling-effects.png" alt="Adding effects" /></p>
+
+<p>For details about shadows and blurs, read below.</p>
+
+<h3 id="shadows"><a href="#shadows">Shadows</a></h3>
+
+<p>You can apply outer and inner shadows to layers. Both these types have the same controls that include color, X and Y offsets, blur and spread. There can be multiple shadows of the same type.</p>
+
+<p><img src="public/styling-avatarshadow1.png" alt="Shadows" /></p>
+
+<h3 id="blurs">Blurs</h3>
+
+<p>Lunacy provides two types of blurs:</p>
+
+<ul>
+  <li><strong>Gaussian</strong> - blurs the selected layer.</li>
+  <li><strong>Background</strong> - blurs the layer underneath the selected layer. To see the background blur effect, you should delete or hide the fill of the selected layer or set its fill opacity to less than 100%. When working with this type of blur, in addition to the blur value you can also adjust the saturation of the blurred layer.</li>
+</ul>
+
+<!--
+
+To switch between blur types, click the down arrowhead next to a blur name and select the required option.
+
+![Switching blur types](public/styling-switchingblur.png)
+
+-->
+
+<p>In the demo below, we first applied a Gaussian blur to an image, removed it and then applied a background blur to a rectangle above the image.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/styling-blursph1.png" height="auto"><source src="/public/styling-blurs2.mp4" type="video/mp4" /></video>
+
+<div class="callout callout--warning">
+    <p><strong>Note:</strong> Blur is quite a demanding effect in terms of computing resources. Avoid excessive use of blurs within a document. For this reason, we limited the maximum blur value that you can set using the slider to <i>50</i>. However, manually you can set values up to <i>10,000</i>.</p>
+</div>
+
+<h2 id="applying-styling-options-to-multiple-layers">Applying styling options to multiple layers</h2>
+
+<p>You can apply styling options to multiple selected layers at the same time. If you see the <em>Click + to replace mixed content</em> caption under any of the options, it means that the selected layers have different settings for this option. A click over the plus icon will replace current settings with new ones common for all selected layers. In the figure below, this caption appears under the <strong>Fills</strong> section.</p>
+
+<p><img src="public/styling-mult1.png" alt="Applying styling options to multiple objects" /></p>
+
+<h2 id="tints">Tints</h2>
+
+<p>Tints are a quick and easy way to apply a color to grouped layers and component instances. They are particularly useful when you need to adjust the color of a semi-filled layer or a complex icon (see the demo below).</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/styling-tintsph2.png" height="auto"><source src="/public/styling-tints2.mp4" type="video/mp4" /></video>
+
+<p>The <strong>Tints</strong> section appears in the Inspector only when you select a group layer or a component.</p>
+
+<p>Unlike other styling options, you can apply only one tint to a layer.</p>
+
+<h3 id="tint-overrides">Tint overrides</h3>
+
+<p>Tint overrides can be handy, for instance, when you are designing tabs or panels with elements that can have different states expressed through different colors.</p>
+
+<div class="callout callout--warning">
+    <p><strong>Note:</strong> Before using tint overrides you should add default tints.</p>
+</div>
+
+<p>The demo below shows three instances of the same component. We first applied a tint override to a nested element, then switched to the <a href="https://lunacy.docs.icons8.com/components/#editing-main-components" target="_blank">component edit mode</a> and modified the default tint. In the latter case, the change applied only to the instances without the override.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/tintoverridesph3.png" height="auto"><source src="/public/tintoverrides3.mp4" type="video/mp4" /></video>
+
+<p>When you apply an override, the reset button appears in the <strong>Tint</strong> section of the Inspector. Use this button to remove the override.</p>
+
+<p><img src="public/reset-overridetint2.png" alt="Reset overrides button" /></p>
+
+<p>For details about overrides, read <a href="https://lunacy.docs.icons8.com/components/#overrides" target="_blank">here</a>.</p>
+
+<!--
+
+## Suggestions panel
+
+The suggestions panel appears when you select a shape or an open path. It displays suggestions of styling options based on your previous actions and choices. In case you've just started using Lunacy, the panel will provide some preset styles.
+
+Also, the list of suggested options depends on the background: Lunacy excludes options that would be scarcely visible against the current background.
+
+A view of the panel is shown in the figure below.
+
+![Suggestions panel](public/sugg-panelview2.png)
+
+It features a set of independently scrollable columns that include:
+
+* **Layer styles** (1). Each style is a combination of two or more styling options (fills, borders, shadows and blurs).
+* **Fill styles** (2). A collection of fills. If you don't see the required color, double-click over any of the suggested colors. It opens the Color Picker where you can select a color of your choice.
+* **Border styles** (3). A collection of border and outline styles.
+* **Effect styles** (4). A collection of inner and outer shadows and blurs. Unlike the other columns, the content of this column does not change.
+* **Corner radius** (5). Available for rectangles only. Values appear in the ascending order. If you don't see the required value, double-click over any of the values, type the required one and press `Enter` to submit.
+* **Background**. Disabled by default. Sets the color of the object overlapped by at least of 50% percent of the surface of the selection. If you don't see the required color, double-click over any of the suggested colors. It opens the Color Picker where you can select a color of your choice.
+
+### Changing the position of the panel
+
+If you want to change the position of the suggestions panel, click the handle at the top-left corner of the panel and drag it up or down. Lunacy remembers the position of the panel individually for each object.
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/sugg-positionph.png" height="auto"><source src="/public/sugg-position.mp4" type="video/mp4"></video>
+
+### Resizing the panel
+
+You can resize the panel to your liking by dragging its lower and right borders. Note that dragging by the right border extends the right-most column, while dragging by the lower-right corner of the panel extends the left-most column of the panel.
+
+To change the size of other columns, hover the cursor between two columns and drag to the right or left when the cursor turns into a double-headed arrow (see the demo below).
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/sugg-resizeph.png" height="auto"><source src="/public/sugg-resize.mp4" type="video/mp4"></video>
+
+### Managing the content of the panel
+
+A right-click over the suggestions panel invokes a context menu that allows you to:
+
+* Pin your favorite items to the top of the list. Pinned items appear with a dark triangle at the lower-right corner.
+* Delete items that you no longer need or will never use. For this, use the **Don't show this again** command.
+* Hide/show some of the columns by clearing/selecting the respective option on the menu (see the figure below).
+
+![Managing the content of the panel](public/sugg-menu.png)
+
+### Disabling the panel
+
+To disable the suggestions panel, use the `Ctrl+Space` shortcut or click the bulb button on the action bar (see the figure below).
+
+![Disabling the suggestions panel](public/sugg-disable1.png)
+
+Also, you can unselect the **Suggestions** option in the **View** menu.
+
+![Disabling the suggestions panel](public/sugg-disable.png)
+
+-->
+
+							
+							<div class="page-nav">
+								
+								<a href="/text" class="page-nav__item page-nav__item--prev">
+									<span>←</span>
+									<span class="page-nav__text">Text</span>
+								</a>
+								
+								
+								<a href="/components" class="page-nav__item page-nav__item--next">
+									<span class="page-nav__text">Components</span>
+									<span>→</span>
+								</a>
+								
+							</div>
+							
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.section -->
+		
+		
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <button class="btn--back-top">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.812103 6L8.80383e-07 5.16164L5 4.37114e-07L10 5.16164L9.1879 6L5 1.67671L0.812103 6Z" fill="white"/>
+                    </svg>                    
+                    Back to top
+                </button> 
+            </div>
+        </div>
+    </div>
+    <div class="footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Design Assets</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li><a href="https://icons8.com/icons" class="not-visibly">Icons</a></li>
+                        <li><a href="https://photos.icons8.com/" class="not-visibly">Stock photos</a></li>
+                        <li data-v-6c9aea26=""><a href="https://generated.photos/" data-v-6c9aea26="" class="not-visibly">AI-generated faces</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/illustrations" data-v-6c9aea26="" class="not-visibly">Vector illustrations</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/music" data-v-6c9aea26="" class="not-visibly">Royalty-free music</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/emoji" data-v-6c9aea26="" class="not-visibly mark mark--new">Emoji</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Apps</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/lunacy" data-v-6c9aea26="" class="not-visibly">Lunacy</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/app" data-v-6c9aea26="" class="not-visibly">Pichon icons</a></li>
+                        <li data-v-6c9aea26=""><a href="https://photos.icons8.com/creator" data-v-6c9aea26="" class="not-visibly mark mark--new">Photo Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/vector-creator/" data-v-6c9aea26="" class="not-visibly mark mark--new">Vector Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/upscaler" data-v-6c9aea26="" class="not-visibly mark mark--new"> Smart Upscaler</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">About icons8</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/about" data-v-6c9aea26=""  class="not-visibly">In short</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/our-business-model/" data-v-6c9aea26="" class="not-visibly">Business model</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/advertising" data-v-6c9aea26="" class="not-visibly">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Community</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li class="social">
+                            <a href="https://www.pinterest.com/visualpharm/" aria-label="pinterest" class="not-visibly" data-v-6c9aea26=""><svg viewBox="0 0 24 24" width="16" height="16" data-v-6c9aea26=""><path d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.linkedin.com/company/icons8-llc" aria-label="linkedin" class="not-visibly" data-v-6c9aea26=""><svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" data-v-6c9aea26=""><path d="M3 13V3.85185H0V13H3Z" data-v-6c9aea26=""></path><path d="M1.5 0C0.6 0 0 0.515185 0 1.18926C0 1.86333 0.6 2.40741 1.5 2.40741C2.44 2.40741 3 1.86333 3 1.18926C2.965 0.515185 2.4 0 1.5 0Z" data-v-6c9aea26=""></path><path d="M11 13H14V7.82889C14 5.1663 12.39 3.85185 10.405 3.85185C8.465 3.85185 7.5 5.08444 7.5 5.08444V3.85185H4.5V13H7.5V8.18519C7.5 7.23185 8 6.24 9.21 6.24H9.25C10.5 6.25926 11 7.22222 11 8.18519V13Z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://twitter.com/icons_8" aria-label="twitter" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="12" viewBox="0 0 15 12" data-v-6c9aea26=""><path d="M15 1.42a6.42 6.42 0 0 1-1.77.48A3.06 3.06 0 0 0 14.59.22a6.34 6.34 0 0 1-1.96.73 3.1 3.1 0 0 0-2.25-.96A3.06 3.06 0 0 0 7.3 3.03a3.17 3.17 0 0 0 .08.69A8.8 8.8 0 0 1 1.04.55a2.95 2.95 0 0 0-.42 1.53A3.01 3.01 0 0 0 1.99 4.6 3.2 3.2 0 0 1 .6 4.22v.04a3.05 3.05 0 0 0 2.47 2.97 3.12 3.12 0 0 1-.82.1 2.63 2.63 0 0 1-.57-.05 3.08 3.08 0 0 0 2.87 2.11 6.24 6.24 0 0 1-3.82 1.29 6 6 0 0 1-.74-.04A8.8 8.8 0 0 0 4.71 12a8.62 8.62 0 0 0 8.76-8.62l-.01-.4A5.86 5.86 0 0 0 15 1.42" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.facebook.com/Icons8" aria-label="facebook" class="not-visibly" data-v-6c9aea26=""><svg width="6" height="13" viewBox="0 0 6 13" data-v-6c9aea26=""><path d="M4.27 13H1.6V6.5H0V4.34h1.6V3.02c0-1.81.54-3.01 2.64-3.01h1.63v2.16h-.98c-.82 0-.87.4-.87.97v1.2h1.97L5.76 6.5H4.27V13z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://dribbble.com/icons8" aria-label="dribbble" class="not-visibly" data-v-6c9aea26=""><svg width="13" height="13" viewBox="0 0 13 13" data-v-6c9aea26=""><path d="M8.45 7.45a7.55 7.55 0 0 1 1.4-.14 8.56 8.56 0 0 1 1.96.25 5.43 5.43 0 0 1-2.56 3.6 19.3 19.3 0 0 0-.8-3.71zm-5.14 3.46a7.98 7.98 0 0 1 4.09-3.2 17.66 17.66 0 0 1 .8 3.94 4.9 4.9 0 0 1-1.71.26 5.7 5.7 0 0 1-3.18-1zM8.09 6.4c-.13-.29-.24-.6-.38-.89a14.02 14.02 0 0 0 3.25-2.06 5.53 5.53 0 0 1 .96 3.04 8.46 8.46 0 0 0-2.07-.29 10 10 0 0 0-1.76.2zm2.16-3.8a11.71 11.71 0 0 1-3 1.91 21.57 21.57 0 0 0-2.16-3.22 5.1 5.1 0 0 1 1.4-.2 5.47 5.47 0 0 1 3.76 1.51zm-4 2.31a12.57 12.57 0 0 1-4.4.78h-.74a5.58 5.58 0 0 1 2.89-4 17.83 17.83 0 0 1 2.25 3.22zM6.49 0a6.5 6.5 0 1 0 6.52 6.49A6.48 6.48 0 0 0 6.49 0zm.56 6.69a8.74 8.74 0 0 0-4.54 3.47 5.08 5.08 0 0 1-1.42-3.4c.27 0 .51.04.76.04a14.2 14.2 0 0 0 4.86-.89 4.85 4.85 0 0 0 .34.78z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://uxplanet.org/@icons8" aria-label="medium" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="13" viewBox="0 0 15 13" data-v-6c9aea26=""><path d="M15 12.48a.43.43 0 0 1-.44.48.9.9 0 0 1-.39-.11l-.65-.33-2.88-1.48L15 3.79v8.69zM5.71 8.52V3.81l3.21 6.36-2.88-1.48zM9.49.68l.27-.43a.48.48 0 0 1 .56-.23.35.35 0 0 1 .09.04l4.53 2.31a.01.01 0 0 1 .01.01.07.07 0 0 1 .02.07l-4.51 7.5-.46.76-2.98-5.9zM5 12.48a.44.44 0 0 1-.41.52.63.63 0 0 1-.28-.08L.42 10.93a.86.86 0 0 1-.42-.69V.48A.35.35 0 0 1 .33.07a.42.42 0 0 1 .23.06L.69.2l4.29 2.19a.04.04 0 0 1 .02.02v10.07z" data-v-6c9aea26=""></path></svg></a>
+                        </li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/blog/" data-v-6c9aea26="" class="not-visibly">Blog</a></li>
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com/" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://www.producthunt.com/@icons_8" data-v-6c9aea26="" class="not-visibly">Product Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Request</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/icons/request-icon" data-v-6c9aea26="" class="not-visibly">Icon</a></li>
+                        <li data-v-6c9aea26=""><a href="https://request.icons8.com/photo-request" data-v-6c9aea26="" class="not-visibly">Photo shoot</a></li>
+                        <li data-v-6c9aea26=""><a href="https://lunatics.icons8.com" data-v-6c9aea26="" class="not-visibly">Lunacy feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">For Developers</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://developers.icons8.com/docs/getting-started" data-v-6c9aea26="" class="not-visibly">API documentation</a></li>
+                        <li data-v-6c9aea26=""><a href="https://img.icons8.com" data-v-6c9aea26="" class="not-visibly">Omg-Img</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Support</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.crisp.help/en/" data-v-6c9aea26="" class="not-visibly">FAQ</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/contact" data-v-6c9aea26="" class="not-visibly">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Licenses</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/license" data-v-6c9aea26="" class="not-visibly">Free license</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/pricing" data-v-6c9aea26="" class="not-visibly mark mark--upgrade">Paid license</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <span class="footer__bottom__copywriting">© 2018 Icons8 LLC</span>
+                <a href="#" class="not-visibly">Privacy Policy</a>
+                <a href="#" class="not-visibly">Terms and Conditions</a>
+                <a href="#" class="not-visibly">Accelerated by KeyCDN</a>
+                <span class="footer__bottom__link">
+                    
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.modal.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/lunr.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/simplebar.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/search-modal.js"></script>
+
+
+
+	</body>
+</html>

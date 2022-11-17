@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Editing shapes</title>
+
+	<meta name="description" content="Make sure that you know everything about working with shapes in Lunacy">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-64.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-96.png"/>
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/jquery.modal.min.css">
+
+	</head>
+	<body class="blue">
+		
+	<header class="site-header">
+		<div class="container-fluid">
+			<div class="row">
+				
+					<a href="https://icons8.com/lunacy" class="site-header__logo">
+						<img src="/doks-theme/assets/images/layout/logo.svg">
+					</a>
+				
+				<div id="mobile-menu" class="site-header__wrapper">
+					
+					<ul class="site-header__nav normalize" data-da>
+						
+							
+								<li><a href="/" class="not-visibly">Documentation</a></li>
+							
+						
+							
+								<li><a href="https://lunatics.icons8.com/" class="not-visibly">Request Features</a></li>
+							
+						
+							
+								<li><a href="/release-notes/" class="not-visibly">Release Notes</a></li>
+							
+						
+							
+								<li><a href="https://community.icons8.com/c/lunacy/" class="not-visibly">Forum</a></li>
+							
+						
+					</ul>
+					
+					<div class="site-header__buttons">
+						<a href="#" class="btn--language not-visibly"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.00033 1.16699C5.09928 1.16699 3.41206 2.08714 2.34619 3.50033H2.33366V3.51628C1.60446 4.49006 1.16699 5.69388 1.16699 7.00033C1.16699 10.2151 3.78557 12.8337 7.00033 12.8337C10.2151 12.8337 12.8337 10.2151 12.8337 7.00033C12.8337 3.78557 10.2151 1.16699 7.00033 1.16699ZM8.75033 2.67432C10.4625 3.36462 11.667 5.03604 11.667 7.00033C11.667 8.21823 11.2007 9.32101 10.4411 10.1506C10.2918 9.67823 9.85549 9.33366 9.33366 9.33366H8.75033V7.58366C8.75033 7.26166 8.48899 7.00033 8.16699 7.00033H5.25033V5.83366H5.83366C6.15566 5.83366 6.41699 5.57233 6.41699 5.25033V4.08366H7.58366C8.22824 4.08366 8.75033 3.56158 8.75033 2.91699V2.67432ZM2.45443 5.95443L3.50033 7.00033L5.25033 8.75033V9.33366C5.25033 9.97824 5.77241 10.5003 6.41699 10.5003V11.6271C4.11036 11.341 2.33366 9.38654 2.33366 7.00033C2.33366 6.63994 2.37771 6.29101 2.45443 5.95443Z" fill="black"/>
+							</svg>EN
+						</a>
+						<a href="https://icons8.com/lunacy" class="btn btn--blue">Download</a>
+						<a href="#" style="display: none;" class="btn">Sign In</a>
+					</div>
+				</div>
+				<div id="site-header-burger" class="site-header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="micro-nav-header menu-disable  page-menu ">
+	
+		<span>Editing shapes / </span><span class="js-subheader"></span>
+	
+	<div class="arrow"></div>
+</div>
+<ul id="micro-nav" class="normalize micro-nav  ">
+	<li>
+		<div class="search">
+    <div class="search__container">
+        <button class="search__button" id="site_search">
+            <img src="/doks-theme/assets/images/layout/search.svg">
+            Search...
+        </button>
+    </div>
+</div>
+
+<div class="search-modal" id="search-modal">
+    <div class="search-bar" id="search-bar">
+    </div>
+    <div class="search-results" id="search-results">
+    </div>
+    <div id="powered-by"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+	</li>
+	
+	
+	<li><a href="/about" class="not-visibly">About Lunacy</a></li>
+	
+	<li><a href="/sysreq" class="not-visibly">System requirements</a></li>
+	
+	<li><a href="/interface" class="not-visibly">Interface</a></li>
+	
+	<li><a href="/clouddocs" class="not-visibly">Cloud documents</a></li>
+	
+	<li><a href="/tools" class="not-visibly">Tools</a></li>
+	
+	<li><a href="/layers" class="not-visibly">Layers</a></li>
+	
+	<li><a href="/editing" class="not-visibly">Editing shapes</a></li>
+	
+	<li><a href="/text" class="not-visibly">Text</a></li>
+	
+	<li><a href="/styling" class="not-visibly">Styling</a></li>
+	
+	<li><a href="/components" class="not-visibly">Components</a></li>
+	
+	<li><a href="/layerstyles/" class="not-visibly">Layer and text styles</a></li>
+	
+	<li><a href="/libraries" class="not-visibly">Libraries</a></li>
+	
+	<li><a href="/images" class="not-visibly">Images</a></li>
+	
+	<li><a href="/export" class="not-visibly">Export</a></li>
+	
+	<li><a href="/prototyping" class="not-visibly">Prototyping</a></li>
+	
+	<li><a href="/linked_design" class="not-visibly">Linked design</a></li>
+	
+	<li><a href="/teams" class="not-visibly">Teams</a></li>
+	
+	<li><a href="/comments" class="not-visibly">Comments</a></li>
+	
+	<li><a href="/tips" class="not-visibly">Tips and Tricks</a></li>
+	
+	<li><a href="/shortcuts" class="not-visibly">Shortcuts</a></li>
+	
+	<li><a href="/localization" class="not-visibly">Localization</a></li>
+	
+	<li><a href="/support" class="not-visibly">FAQ and Сontacts</a></li>
+	
+	<li><a href="/release-notes" class="not-visibly">Release History</a></li>
+	
+	<li class="suggest--github"><a href="https://github.com/icons8/lunacy-docs" class="btn btn--suggest-edit"><i class="icon icon--github"></i>Suggest edits</a></li>
+	
+	
+</ul>
+
+
+					</div>
+					<div class="col-lg-9">
+						<div id="content" class="content">
+							<h2 class="content__title">Editing shapes</h2>
+							<p class="subtitle content__desc">Make sure that you know everything about working with shapes in Lunacy</p>
+							<h2 id="introduction">Introduction</h2>
+
+<p>If we put aside such specific <a href="https://lunacy.docs.icons8.com/layers/#introduction" target="_blank">layer types</a> as artboards and hotspots, all layers in Lunacy that are not text or rasters are vector shapes.</p>
+
+<p>Lunacy provides a set of pre-made shapes that you can add in no time using the <a href="https://lunacy.docs.icons8.com/tools/#shape-tools" target="_blank">shape tools</a>. Also, you can make use of the <a href="https://lunacy.docs.icons8.com/tools/#pen-tool" target="_blank">pen</a> and <a href="https://lunacy.docs.icons8.com/tools/#pencil-tool" target="_blank">pencil</a> tools to create freehand shapes and paths. Among the latter two, we should pay special attention to the pen tool, which allows you to edit vector shapes, both pre-made and freehand.</p>
+
+<p>Another important thing for working with shapes is Boolean operations that allow you to combine shapes of all kinds and create even more fancy shapes whose diversity depends only on your creativity.</p>
+
+<p>This section focuses on how to edit and transform vector shapes. For information about creating pre-made shapes, read <a href="https://lunacy.docs.icons8.com/tools/#shape-tools" target="_blank">here</a> and <a href="https://lunacy.docs.icons8.com/layers/#adding-layers" target="_blank">here</a>. For details about creating shapes with the pen tool, read <a href="https://lunacy.docs.icons8.com/tools/#pen-tool" target="_blank">here</a>.</p>
+
+<p>For information how to apply fills, borders, shadows and blurs, refer to the <a href="https://lunacy.docs.icons8.com/styling" target="_blank">Styling</a> section.</p>
+
+<h2 id="transforming-shapes-through-the-inspector">Transforming shapes through the Inspector</h2>
+
+<p>The figure below shows the controls in the Inspector that allow you to transform pre-made shapes.</p>
+
+<p><img src="public/shapes-inspectorcontrols.png" alt="Layer transformation controls" /></p>
+
+<p>These controls include:</p>
+
+<ol>
+  <li>The <strong>Corner radius</strong> control. Available for most of pre-made shapes, except for ellipses, lines and arrows.</li>
+  <li>The <strong>Points</strong> control. Available only for stars and poligons.</li>
+  <li>The <strong>Ratio</strong> control. Available for stars only. Sets the ratio of star shapes.</li>
+</ol>
+
+<p>The demo below shows these controls in action.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/shapes-transform1placeholder.png" height="auto"><source src="/public/shapes-transform1.mp4" type="video/mp4" /></video>
+
+<h3 id="adjusting-the-corner-radius-setting-for-rectangles">Adjusting the corner radius setting for rectangles</h3>
+
+<p>There are two more ways of changing the corner radius setting for rectangles drawn with the shape tool:</p>
+
+<ol>
+  <li>Drag the circle handles that appear inside a rectangle when you select it. This will change the radii of all corners. To change the radius of a single corner, hold <code class="language-plaintext highlighter-rouge">Alt</code> while dragging.</li>
+  <li>In the <strong>Corner radius</strong> control, enter four values separating them with spaces. This will be the values of the corner radii (starting from the top-left and going clockwise). Press <code class="language-plaintext highlighter-rouge">Enter</code> to submit.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/shapes-cronerradplaceholder1.png" height="auto"><source src="/public/shapes-cronerrad2.mp4" type="video/mp4" /></video>
+
+<p><strong>Note:</strong> The above methods won’t work with rectangles drawn with the Pen tool.</p>
+
+<p>See also the demo in the <a href="#vector-editing">Vector editing</a> subsection. It shows how to edit individual corners in other shapes.</p>
+
+<h3 id="smooth-corners">Smooth corners</h3>
+
+<p>You can create shapes with perfectly smooth corners like in Apple interfaces and products.
+To switch between round (default) and smooth corners, click <img src="/public/smoothcornerbtn.png" alt="Smooth corner button" /> next to the corner radius field in the Inspector.</p>
+
+<p>The figure below shows the difference between smooth (red) and round (blue) corners.</p>
+
+<p><img src="/public/rn-smoothcorner.png" alt="Smooth vs Round corners" /></p>
+
+<h2 id="vector-editing"><a href="#vector-editing">Vector editing</a></h2>
+
+<p><strong>Note</strong>: Before you get down to reading this subsection, we recommend you get acquainted with <a href="https://lunacy.docs.icons8.com/tools/#pen-tool" target="_blank">this</a> article first. It provides the basic information about the structure of vector layers, paths, point types and the usage of the Pen tool.</p>
+
+<p>To enable the layer edit mode, select the shape and then do one of the following:</p>
+
+<ul>
+  <li>Double-click the shape.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code>.</li>
+  <li>Click the <strong>Edit Layer</strong> button (<img src="public/tools-editobjectbtn.png" alt="Edit layer button" />) on the context toolbar.</li>
+</ul>
+
+<p>As you do it:</p>
+
+<ol>
+  <li>The Pen tool becomes active.</li>
+  <li>The selection frame disappears. You see the anchor points of the shape.</li>
+  <li>The <strong>Edit shape</strong> section appears in the Inspector.</li>
+</ol>
+
+<p class="is-big"><img src="public/shapes-editmode1.png" alt="Edit Layer button" /></p>
+
+<p>In general, vector editing is all about manipulations with points and bending segments. The basic procedures are as follows:</p>
+
+<ul>
+  <li>To select a point, just click it. To select multiple points, drag over them or hold down <code class="language-plaintext highlighter-rouge">Shift</code> while clicking.</li>
+  <li>To move a point, select and drag it. This works with multiple points as well.</li>
+  <li>To add a new point to a path, hover the cursor over the path, then click the path to get a straight point or double-click to set a mirrored point.</li>
+  <li>To switch between other point types, use the controls in <strong>Edit shape</strong> section of the Inspector (#3 in the figure above).</li>
+  <li>To bend segments, use curved points.</li>
+  <li>To create a rounded corner on a straight point use the corner radius control (#4 in the figure above). It becomes active only when you select a straight point.</li>
+  <li>To delete a point or several points, select it (them) and press the <code class="language-plaintext highlighter-rouge">Delete</code> key.</li>
+</ul>
+
+<p>The next demo shows all the above procedures in action.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/shapes-editmode1.png" height="auto"><source src="/public/shapes-vectorediting3.mp4" type="video/mp4" /></video>
+
+<h2 id="boolean-operations">Boolean Operations</h2>
+
+<p>Boolean operations allow you to create complex shapes by combining parts or all of simple shapes.</p>
+
+<p>For this:</p>
+<ol>
+  <li>Select two or more overlapping shapes.</li>
+  <li>On the context tool bar, select the required Boolean operation as shown in the figure below.</li>
+</ol>
+
+<p><img src="public/shapes-booleans.png" alt="Boolean operations" /></p>
+
+<p>Lunacy provides four types of Boolean operations:</p>
+
+<ul>
+  <li><strong>Union</strong>: Results in a shape that is the sum of areas of all selected shapes.</li>
+  <li><strong>Subtract</strong>: Removes overlapping areas from the lowermost shape. Opposite to the union operation.</li>
+  <li><strong>Intersect</strong>: The result of this operation is a shape that includes only the area where all selected shapes overlap.</li>
+  <li><strong>Difference</strong>: Results in a shape that does not include overlapping areas. Opposite to the intersect operation.</li>
+</ul>
+
+<p>The demo below shows how Boolean operations work.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/shapes-booleansplaceholder.png" height="auto"><source src="/public/shapes-booleans.mp4" type="video/mp4" /></video>
+
+<p>When you apply a Boolean operation, the selected shapes become a Boolean group. The figure below shows a view of a Boolean group in the Layer List. Note that there is an icon next to one of the shapes. It indicates the type of the Boolean operation currently applied. By clicking this icon you invoke a menu where you can select another operation.</p>
+
+<p><img src="public/shapes-ellipseunion.png" alt="Boolean group" /></p>
+
+<p>You can select individual shapes within the group through the Layer List or on the canvas. If necessary, you can move and resize them on the canvas to modify the resulting shape.</p>
+
+<div class="callout callout--info">
+    <p><strong>Tip:</strong> There is no special button or menu option to disassemble a Boolean group. But you can do it by dragging shapes out of the group in the <b>Layers</b> list</p>
+    <p>For more tips and tricks, click <a href="https://lunacy.docs.icons8.com/tips/" target="_blank">here</a>.</p>
+</div>
+
+<!--
+
+**Tip:** There is no special button or menu option to disassemble a Boolean group. But you can do it by dragging shapes out of the group in the **Objects** panel.  
+
+-->
+
+<h2 id="flattening">Flattening</h2>
+
+<p>The flattening operation is another method of creating complex shapes by combining two or more primitives. It is in a way similar to the Boolean union operation, but unlike the latter the result of flattening is a single layer that cannot be disassembled. The <strong>Flatten selection</strong> option shares the same drop-down list with the Boolean operations and also is available on the <strong>Layer</strong> menu (see the figure below).</p>
+
+<p><img src="public/shapes-flatten.png" alt="Boolean group" /></p>
+
+<p>The next demo shows how flattening works.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/shapes-flattenplaceholder.png" height="auto"><source src="/public/shapes-flat.mp4" type="video/mp4" /></video>
+
+<h2 id="masks">Masks</h2>
+
+<p>Masks allow you to use shapes for hiding parts of layers that don’t fall within a shape.</p>
+
+<p>To create a mask:</p>
+
+<ol>
+  <li>Add a shape that you will use as a mask over the target layer(s).</li>
+  <li>Send the mask shape to back. You can skip this step, if you are applying a mask to a photo.</li>
+  <li>Select the mask shape and the target layer(s).</li>
+  <li>On the context toolbar, click the <strong>Toggle mask</strong> button (<img src="public/shapes-togglemaskbtn.png" alt="Toggle mask button" />) or press <code class="language-plaintext highlighter-rouge">Ctrl+M</code>. The <strong>Toggle mask</strong> option is also available on the context menu.</li>
+</ol>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/shapes-masksplaceholder.png" height="auto"><source src="/public/shapes-masks.mp4" type="video/mp4" /></video>
+
+<p>When you apply a mask, Lunacy creates a mask group in the Layer List.</p>
+
+<p><img src="public/shapes-maskgroup.png" alt="A mask group" /></p>
+
+<p>If it is necessary, you can select the mask shape right within the mask group and move, edit or resize the mask.</p>
+
+<p>To remove a mask, select the mask group in the Layer List or on the canvas and click the <strong>Toggle mask</strong> button (<code class="language-plaintext highlighter-rouge">Ctrl+M</code>).</p>
+
+<h2 id="outline-stroke">Outline stroke</h2>
+
+<p>The <strong>Outline stroke</strong> option (<code class="language-plaintext highlighter-rouge">Ctrl+Shift+O</code>) appears on the context menu and on the <strong>Layer</strong> menu when you select a shape with a border. It allows you to convert that border into an independent layer. Watch the demo below.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="100%" poster="/public/shapes-outlinestrokeplaceholder.png" height="auto"><source src="/public/shapes-outlinestroke.mp4" type="video/mp4" /></video>
+
+<h2 id="rasterizing-vector-shapes">Rasterizing vector shapes</h2>
+
+<p><strong>Note:</strong> Bear in mind that you cannot convert a raster back into a vector shape.</p>
+
+<p>When it is necessary, you can turn vector shapes into rasters.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Select the required layer(s).</li>
+  <li>Right-click over the selection, then click <strong>Rasterize selection</strong> on the context menu. This option is also available on the <strong>Layer</strong> menu.</li>
+</ol>
+
+<p><img src="public/shapes-rasterize.png" alt="Rasterizing vector shapes" /></p>
+
+<p>See also <a href="https://lunacy.docs.icons8.com/interface/#show-pixels-on-zoom" target="_blank">Show pixels on zoom</a>.</p>
+
+							
+							<div class="page-nav">
+								
+								<a href="/layers" class="page-nav__item page-nav__item--prev">
+									<span>←</span>
+									<span class="page-nav__text">Layers</span>
+								</a>
+								
+								
+								<a href="/text" class="page-nav__item page-nav__item--next">
+									<span class="page-nav__text">Text</span>
+									<span>→</span>
+								</a>
+								
+							</div>
+							
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.section -->
+		
+		
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <button class="btn--back-top">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.812103 6L8.80383e-07 5.16164L5 4.37114e-07L10 5.16164L9.1879 6L5 1.67671L0.812103 6Z" fill="white"/>
+                    </svg>                    
+                    Back to top
+                </button> 
+            </div>
+        </div>
+    </div>
+    <div class="footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Design Assets</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li><a href="https://icons8.com/icons" class="not-visibly">Icons</a></li>
+                        <li><a href="https://photos.icons8.com/" class="not-visibly">Stock photos</a></li>
+                        <li data-v-6c9aea26=""><a href="https://generated.photos/" data-v-6c9aea26="" class="not-visibly">AI-generated faces</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/illustrations" data-v-6c9aea26="" class="not-visibly">Vector illustrations</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/music" data-v-6c9aea26="" class="not-visibly">Royalty-free music</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/emoji" data-v-6c9aea26="" class="not-visibly mark mark--new">Emoji</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Apps</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/lunacy" data-v-6c9aea26="" class="not-visibly">Lunacy</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/app" data-v-6c9aea26="" class="not-visibly">Pichon icons</a></li>
+                        <li data-v-6c9aea26=""><a href="https://photos.icons8.com/creator" data-v-6c9aea26="" class="not-visibly mark mark--new">Photo Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/vector-creator/" data-v-6c9aea26="" class="not-visibly mark mark--new">Vector Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/upscaler" data-v-6c9aea26="" class="not-visibly mark mark--new"> Smart Upscaler</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">About icons8</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/about" data-v-6c9aea26=""  class="not-visibly">In short</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/our-business-model/" data-v-6c9aea26="" class="not-visibly">Business model</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/advertising" data-v-6c9aea26="" class="not-visibly">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Community</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li class="social">
+                            <a href="https://www.pinterest.com/visualpharm/" aria-label="pinterest" class="not-visibly" data-v-6c9aea26=""><svg viewBox="0 0 24 24" width="16" height="16" data-v-6c9aea26=""><path d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.linkedin.com/company/icons8-llc" aria-label="linkedin" class="not-visibly" data-v-6c9aea26=""><svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" data-v-6c9aea26=""><path d="M3 13V3.85185H0V13H3Z" data-v-6c9aea26=""></path><path d="M1.5 0C0.6 0 0 0.515185 0 1.18926C0 1.86333 0.6 2.40741 1.5 2.40741C2.44 2.40741 3 1.86333 3 1.18926C2.965 0.515185 2.4 0 1.5 0Z" data-v-6c9aea26=""></path><path d="M11 13H14V7.82889C14 5.1663 12.39 3.85185 10.405 3.85185C8.465 3.85185 7.5 5.08444 7.5 5.08444V3.85185H4.5V13H7.5V8.18519C7.5 7.23185 8 6.24 9.21 6.24H9.25C10.5 6.25926 11 7.22222 11 8.18519V13Z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://twitter.com/icons_8" aria-label="twitter" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="12" viewBox="0 0 15 12" data-v-6c9aea26=""><path d="M15 1.42a6.42 6.42 0 0 1-1.77.48A3.06 3.06 0 0 0 14.59.22a6.34 6.34 0 0 1-1.96.73 3.1 3.1 0 0 0-2.25-.96A3.06 3.06 0 0 0 7.3 3.03a3.17 3.17 0 0 0 .08.69A8.8 8.8 0 0 1 1.04.55a2.95 2.95 0 0 0-.42 1.53A3.01 3.01 0 0 0 1.99 4.6 3.2 3.2 0 0 1 .6 4.22v.04a3.05 3.05 0 0 0 2.47 2.97 3.12 3.12 0 0 1-.82.1 2.63 2.63 0 0 1-.57-.05 3.08 3.08 0 0 0 2.87 2.11 6.24 6.24 0 0 1-3.82 1.29 6 6 0 0 1-.74-.04A8.8 8.8 0 0 0 4.71 12a8.62 8.62 0 0 0 8.76-8.62l-.01-.4A5.86 5.86 0 0 0 15 1.42" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.facebook.com/Icons8" aria-label="facebook" class="not-visibly" data-v-6c9aea26=""><svg width="6" height="13" viewBox="0 0 6 13" data-v-6c9aea26=""><path d="M4.27 13H1.6V6.5H0V4.34h1.6V3.02c0-1.81.54-3.01 2.64-3.01h1.63v2.16h-.98c-.82 0-.87.4-.87.97v1.2h1.97L5.76 6.5H4.27V13z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://dribbble.com/icons8" aria-label="dribbble" class="not-visibly" data-v-6c9aea26=""><svg width="13" height="13" viewBox="0 0 13 13" data-v-6c9aea26=""><path d="M8.45 7.45a7.55 7.55 0 0 1 1.4-.14 8.56 8.56 0 0 1 1.96.25 5.43 5.43 0 0 1-2.56 3.6 19.3 19.3 0 0 0-.8-3.71zm-5.14 3.46a7.98 7.98 0 0 1 4.09-3.2 17.66 17.66 0 0 1 .8 3.94 4.9 4.9 0 0 1-1.71.26 5.7 5.7 0 0 1-3.18-1zM8.09 6.4c-.13-.29-.24-.6-.38-.89a14.02 14.02 0 0 0 3.25-2.06 5.53 5.53 0 0 1 .96 3.04 8.46 8.46 0 0 0-2.07-.29 10 10 0 0 0-1.76.2zm2.16-3.8a11.71 11.71 0 0 1-3 1.91 21.57 21.57 0 0 0-2.16-3.22 5.1 5.1 0 0 1 1.4-.2 5.47 5.47 0 0 1 3.76 1.51zm-4 2.31a12.57 12.57 0 0 1-4.4.78h-.74a5.58 5.58 0 0 1 2.89-4 17.83 17.83 0 0 1 2.25 3.22zM6.49 0a6.5 6.5 0 1 0 6.52 6.49A6.48 6.48 0 0 0 6.49 0zm.56 6.69a8.74 8.74 0 0 0-4.54 3.47 5.08 5.08 0 0 1-1.42-3.4c.27 0 .51.04.76.04a14.2 14.2 0 0 0 4.86-.89 4.85 4.85 0 0 0 .34.78z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://uxplanet.org/@icons8" aria-label="medium" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="13" viewBox="0 0 15 13" data-v-6c9aea26=""><path d="M15 12.48a.43.43 0 0 1-.44.48.9.9 0 0 1-.39-.11l-.65-.33-2.88-1.48L15 3.79v8.69zM5.71 8.52V3.81l3.21 6.36-2.88-1.48zM9.49.68l.27-.43a.48.48 0 0 1 .56-.23.35.35 0 0 1 .09.04l4.53 2.31a.01.01 0 0 1 .01.01.07.07 0 0 1 .02.07l-4.51 7.5-.46.76-2.98-5.9zM5 12.48a.44.44 0 0 1-.41.52.63.63 0 0 1-.28-.08L.42 10.93a.86.86 0 0 1-.42-.69V.48A.35.35 0 0 1 .33.07a.42.42 0 0 1 .23.06L.69.2l4.29 2.19a.04.04 0 0 1 .02.02v10.07z" data-v-6c9aea26=""></path></svg></a>
+                        </li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/blog/" data-v-6c9aea26="" class="not-visibly">Blog</a></li>
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com/" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://www.producthunt.com/@icons_8" data-v-6c9aea26="" class="not-visibly">Product Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Request</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/icons/request-icon" data-v-6c9aea26="" class="not-visibly">Icon</a></li>
+                        <li data-v-6c9aea26=""><a href="https://request.icons8.com/photo-request" data-v-6c9aea26="" class="not-visibly">Photo shoot</a></li>
+                        <li data-v-6c9aea26=""><a href="https://lunatics.icons8.com" data-v-6c9aea26="" class="not-visibly">Lunacy feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">For Developers</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://developers.icons8.com/docs/getting-started" data-v-6c9aea26="" class="not-visibly">API documentation</a></li>
+                        <li data-v-6c9aea26=""><a href="https://img.icons8.com" data-v-6c9aea26="" class="not-visibly">Omg-Img</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Support</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.crisp.help/en/" data-v-6c9aea26="" class="not-visibly">FAQ</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/contact" data-v-6c9aea26="" class="not-visibly">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Licenses</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/license" data-v-6c9aea26="" class="not-visibly">Free license</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/pricing" data-v-6c9aea26="" class="not-visibly mark mark--upgrade">Paid license</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <span class="footer__bottom__copywriting">© 2018 Icons8 LLC</span>
+                <a href="#" class="not-visibly">Privacy Policy</a>
+                <a href="#" class="not-visibly">Terms and Conditions</a>
+                <a href="#" class="not-visibly">Accelerated by KeyCDN</a>
+                <span class="footer__bottom__link">
+                    
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.modal.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/lunr.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/simplebar.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/search-modal.js"></script>
+
+
+
+	</body>
+</html>

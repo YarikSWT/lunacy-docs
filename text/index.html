@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Text</title>
+
+	<meta name="description" content="Learn how to work with text in Lunacy">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-64.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://icons8.com/vue-static/landings/lunacy-new/favicon-96.png"/>
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/jquery.modal.min.css">
+
+	</head>
+	<body class="blue">
+		
+	<header class="site-header">
+		<div class="container-fluid">
+			<div class="row">
+				
+					<a href="https://icons8.com/lunacy" class="site-header__logo">
+						<img src="/doks-theme/assets/images/layout/logo.svg">
+					</a>
+				
+				<div id="mobile-menu" class="site-header__wrapper">
+					
+					<ul class="site-header__nav normalize" data-da>
+						
+							
+								<li><a href="/" class="not-visibly">Documentation</a></li>
+							
+						
+							
+								<li><a href="https://lunatics.icons8.com/" class="not-visibly">Request Features</a></li>
+							
+						
+							
+								<li><a href="/release-notes/" class="not-visibly">Release Notes</a></li>
+							
+						
+							
+								<li><a href="https://community.icons8.com/c/lunacy/" class="not-visibly">Forum</a></li>
+							
+						
+					</ul>
+					
+					<div class="site-header__buttons">
+						<a href="#" class="btn--language not-visibly"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.00033 1.16699C5.09928 1.16699 3.41206 2.08714 2.34619 3.50033H2.33366V3.51628C1.60446 4.49006 1.16699 5.69388 1.16699 7.00033C1.16699 10.2151 3.78557 12.8337 7.00033 12.8337C10.2151 12.8337 12.8337 10.2151 12.8337 7.00033C12.8337 3.78557 10.2151 1.16699 7.00033 1.16699ZM8.75033 2.67432C10.4625 3.36462 11.667 5.03604 11.667 7.00033C11.667 8.21823 11.2007 9.32101 10.4411 10.1506C10.2918 9.67823 9.85549 9.33366 9.33366 9.33366H8.75033V7.58366C8.75033 7.26166 8.48899 7.00033 8.16699 7.00033H5.25033V5.83366H5.83366C6.15566 5.83366 6.41699 5.57233 6.41699 5.25033V4.08366H7.58366C8.22824 4.08366 8.75033 3.56158 8.75033 2.91699V2.67432ZM2.45443 5.95443L3.50033 7.00033L5.25033 8.75033V9.33366C5.25033 9.97824 5.77241 10.5003 6.41699 10.5003V11.6271C4.11036 11.341 2.33366 9.38654 2.33366 7.00033C2.33366 6.63994 2.37771 6.29101 2.45443 5.95443Z" fill="black"/>
+							</svg>EN
+						</a>
+						<a href="https://icons8.com/lunacy" class="btn btn--blue">Download</a>
+						<a href="#" style="display: none;" class="btn">Sign In</a>
+					</div>
+				</div>
+				<div id="site-header-burger" class="site-header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="micro-nav-header menu-disable  page-menu ">
+	
+		<span>Text / </span><span class="js-subheader"></span>
+	
+	<div class="arrow"></div>
+</div>
+<ul id="micro-nav" class="normalize micro-nav  ">
+	<li>
+		<div class="search">
+    <div class="search__container">
+        <button class="search__button" id="site_search">
+            <img src="/doks-theme/assets/images/layout/search.svg">
+            Search...
+        </button>
+    </div>
+</div>
+
+<div class="search-modal" id="search-modal">
+    <div class="search-bar" id="search-bar">
+    </div>
+    <div class="search-results" id="search-results">
+    </div>
+    <div id="powered-by"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+	</li>
+	
+	
+	<li><a href="/about" class="not-visibly">About Lunacy</a></li>
+	
+	<li><a href="/sysreq" class="not-visibly">System requirements</a></li>
+	
+	<li><a href="/interface" class="not-visibly">Interface</a></li>
+	
+	<li><a href="/clouddocs" class="not-visibly">Cloud documents</a></li>
+	
+	<li><a href="/tools" class="not-visibly">Tools</a></li>
+	
+	<li><a href="/layers" class="not-visibly">Layers</a></li>
+	
+	<li><a href="/editing" class="not-visibly">Editing shapes</a></li>
+	
+	<li><a href="/text" class="not-visibly">Text</a></li>
+	
+	<li><a href="/styling" class="not-visibly">Styling</a></li>
+	
+	<li><a href="/components" class="not-visibly">Components</a></li>
+	
+	<li><a href="/layerstyles/" class="not-visibly">Layer and text styles</a></li>
+	
+	<li><a href="/libraries" class="not-visibly">Libraries</a></li>
+	
+	<li><a href="/images" class="not-visibly">Images</a></li>
+	
+	<li><a href="/export" class="not-visibly">Export</a></li>
+	
+	<li><a href="/prototyping" class="not-visibly">Prototyping</a></li>
+	
+	<li><a href="/linked_design" class="not-visibly">Linked design</a></li>
+	
+	<li><a href="/teams" class="not-visibly">Teams</a></li>
+	
+	<li><a href="/comments" class="not-visibly">Comments</a></li>
+	
+	<li><a href="/tips" class="not-visibly">Tips and Tricks</a></li>
+	
+	<li><a href="/shortcuts" class="not-visibly">Shortcuts</a></li>
+	
+	<li><a href="/localization" class="not-visibly">Localization</a></li>
+	
+	<li><a href="/support" class="not-visibly">FAQ and Сontacts</a></li>
+	
+	<li><a href="/release-notes" class="not-visibly">Release History</a></li>
+	
+	<li class="suggest--github"><a href="https://github.com/icons8/lunacy-docs" class="btn btn--suggest-edit"><i class="icon icon--github"></i>Suggest edits</a></li>
+	
+	
+</ul>
+
+
+					</div>
+					<div class="col-lg-9">
+						<div id="content" class="content">
+							<h2 class="content__title">Text</h2>
+							<p class="subtitle content__desc">Learn how to work with text in Lunacy</p>
+							<p>Text is one of the key aspects of almost every design project. This section describes how to work with text layers in Lunacy.</p>
+
+<h2 id="text-related-controls">Text-related controls</h2>
+
+<p>The figure below shows the location of text-related controls in the Lunacy interface.</p>
+
+<p><img src="/public/text-controlsall69.png" alt="Text-related" /></p>
+
+<ol>
+  <li>The <strong>Text</strong> section. Appears in the Inspector when a text layer is selected. Features all the <a href="#text-settings">settings</a> that you might need when working with text.</li>
+  <li>The <strong>Text</strong> menu. Includes all the settings available in the <strong>Text</strong> section of the Inspector, plus the <strong>Convert to Outlines</strong> command. This command also appears on the context menu and lets you <a href="#converting-text-to-vector-shapes">convert text to vector shapes</a>.</li>
+  <li>The <strong>Edit Layer</strong> button. The button appears when you select a text layer. Click this button to start editing the text. Alternatively, just press <code class="language-plaintext highlighter-rouge">Enter</code>.</li>
+  <li>In the <strong>Appearance</strong> section you deal with <a href="https://lunacy.docs.icons8.com/layerstyles/#text-styles" target="_blank">reusable text styles</a>.</li>
+  <li>The <strong>Generate text</strong> button. A click over the button generates a random text. A click over the down arrowhead next to the button invokes the <a href="#text-generation-and-text-snippets">menu with text generation options</a>.</li>
+  <li>The <strong>Advanced options</strong> button. Opens a <a href="#advanced-text-options">panel</a> with such text options as letter case, numbered and bulleted lists, etc.</li>
+</ol>
+
+<h2 id="adding-text-layers">Adding text layers</h2>
+
+<p>There are two ways of adding text layers.</p>
+
+<p><strong>Way 1. Click and type</strong></p>
+
+<ol>
+  <li>Select the Text tool on the toolbar (or press <code class="language-plaintext highlighter-rouge">T</code>). The pointer changes to <b><sup>+</sup></b><strong>T</strong>.</li>
+  <li>Click anywhere on the canvas to insert your text layer. Once you click, a new text layer with the <em>Type something</em> placeholder appears.</li>
+  <li>Start typing to replace the placeholder with the text of your own.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Esc</code> to exit the edit mode.</li>
+</ol>
+
+<p>Lunacy applies <a href="#text-block-resize-options">horizontal resize</a> to the text added this way.</p>
+
+<p><strong>Way 2. Click and drag</strong></p>
+
+<ol>
+  <li>Select the Text tool on the toolbar (or press <code class="language-plaintext highlighter-rouge">T</code>). The pointer changes to <b><sup>+</sup></b><strong>T</strong>.</li>
+  <li>Click on the canvas and hold down the mouse button.</li>
+  <li>Drag to create a text layer of the required size. Lunacy will add a random text to fit the size of the layer. If the auto-text exceeds the block size, you can delete the excess or leave it as is. It won’t be visible unless the text block is in the edit mode.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Esc</code> to exit the edit mode.</li>
+</ol>
+
+<p><strong>Note:</strong> You can use the <code class="language-plaintext highlighter-rouge">Shift + R</code> shortcut to refresh the auto-generated text.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-addtext69ph.png" height="auto"><source src="/public/text-addtext69.mp4" type="video/mp4" /></video>
+
+<h2 id="adding-text-to-shapes">Adding text to shapes</h2>
+
+<p>In Lunacy, when you need to add a text to a shape, you can do it in three simple steps:</p>
+
+<ol>
+  <li>Select the required shape.</li>
+  <li>Select the text tool or press <code class="language-plaintext highlighter-rouge">T</code>.</li>
+  <li>Enter your text.</li>
+</ol>
+
+<p>As you do it, Lunacy automatically creates a group layer with the shape and text layers. This small feature can be of great use when it comes to design of such UI elements as buttons, menus and things alike.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-toshapeph.png" height="auto"><source src="/public/text-toshape.mp4" type="video/mp4" /></video>
+
+<h2 id="editing-text">Editing text</h2>
+
+<p>To edit a text:</p>
+
+<ol>
+  <li>Select the text layer in the Layer List or by clicking it on the canvas.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code> or click the <strong>Edit Layer</strong> <img src="public/text-editobjectbtn1.png" alt="missing fonts button" /> button on the top bar to enable the edit mode.</li>
+  <li>Enter a new text or edit the existing one.</li>
+  <li>When done, press <code class="language-plaintext highlighter-rouge">Esc</code> to exit the edit mode.</li>
+</ol>
+
+<p>When editing text settings you don’t need to select a word or the whole text to make it bold, italicized or whatever. Just set the caret inside a word or at the end of the text and apply the required setting. In the latter case, the setting will be applied to the whole text.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-edittipph.png" height="auto"><source src="/public/text-edittip.mp4" type="video/mp4" /></video>
+
+<p>See also the <a href="#text-settings">Text settings</a> section below.</p>
+
+<h2 id="text-settings"><a href="#text-settings">Text settings</a></h2>
+
+<p>When you select a text layer, the <strong>Text</strong> section appears in the Inspector. The section features the basic text settings. Also, you can click the settings button at the top left corner of the section to access advanced settings.</p>
+
+<p><img src="public/text-controls2-69.png" alt="Text controls" /></p>
+
+<p>Text settings include:</p>
+
+<ol>
+  <li>Font family</li>
+  <li>Font weight</li>
+  <li>Font size picker</li>
+  <li>Line spacing</li>
+  <li>Letter spacing</li>
+  <li>Font color picker</li>
+  <li>Paragraph spacing</li>
+  <li>Text generation options</li>
+  <li>Text block resize options</li>
+  <li>Text alignment</li>
+  <li>Text position</li>
+  <li>Letter cases</li>
+  <li>Underline and strikethrough</li>
+  <li>List types</li>
+  <li>Superscript and subscript</li>
+</ol>
+
+<p>For details about each group of settings, read the sections below.</p>
+
+<h3 id="font-family">Font family</h3>
+
+<p>The default font in Lunacy is Inter. To select another font:</p>
+
+<ul>
+  <li>
+    <p>If you know the name of the font you need, type it in the text field of the font picker.</p>
+
+    <p>OR</p>
+  </li>
+  <li>
+    <p>Expand the font family list and pick up the one you like.</p>
+  </li>
+</ul>
+
+<p><img src="public/text-fontlist-69.png" alt="Font picker 1" /></p>
+
+<p>The top section of the font family list shows the three fonts that you’ve recently used.
+The three buttons at the top of the list allow you to quickly filter the content of the list:</p>
+
+<ul>
+  <li><strong>All</strong>: Shows the full list of fonts.</li>
+  <li><strong>System</strong>: Shows the list of fonts (TTF/OTF) installed on your computer.</li>
+  <li><strong>Google</strong>: Shows the list of fonts available in the <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> library. You don’t need to download them. Lunacy will do it automatically. Lunacy’s integration with Google Fonts will solve most of your <a href="#missing-fonts">problems with missing fonts</a>.</li>
+</ul>
+
+<p>The list shows font names and their samples. If a font’s name is too long and appears truncated, hover a cursor over the name to view the full name. When you hover the cursor over font samples, Lunacy will display their larger previews. Google fonts come without samples until used.</p>
+
+<p><img src="public/text-fontfam.gif" alt="Font picker 2" /></p>
+
+<p><strong>Note</strong>: You might experience a slight loading delay when applying a Google font for the first time. Also, if your computer is not connected to the internet, the list of Google fonts will include only those fonts that you have already used.</p>
+
+<h3 id="missing-fonts"><a href="#missing-fonts">Missing fonts</a></h3>
+
+<p>When you open a project received from your team or downloaded from the internet, Lunacy checks if all the required fonts are available on your computer. If some of them are missing but they are available in the Google fonts library, Lunacy will download and apply them, provided that your computer is connected to the internet. But if those fonts are not from the Google library:</p>
+
+<ul>
+  <li>The default Inter is applied to the text layers with missing fonts.</li>
+  <li>Upon selection of these layers, the name of the missing font appears in red in the font picker, as well as in the Layer list.</li>
+  <li>The missing fonts button appears on the top toolbar.</li>
+</ul>
+
+<p><img src="public/text-misfontbtn1.png" alt="Missing fonts 1" /></p>
+
+<p>A click over the button invokes a dialog box where you can select replacements for the missing fonts.</p>
+
+<p><img src="public/text-misfontdialog.png" alt="Missing fonts 2" /></p>
+
+<h3 id="font-weight">Font weight</h3>
+
+<p>Each font family comes with different sets of weights (also known as font styles), which might include: Regular, Bold, Semibold, Italic, etc.</p>
+
+<p>The text weight control allows you to select the required font weight. If a font has only one weight, the control appears disabled:</p>
+
+<p><img src="public/text-bold8.png" alt="Font weight control" /></p>
+
+<p>Also, you can use standard text editor shortcuts:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl+B</code>/<code class="language-plaintext highlighter-rouge">⌘ B</code> — <strong>Bold</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl+I</code>/<code class="language-plaintext highlighter-rouge">⌘ I</code> — <em>Italic</em></li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl+U</code>/<code class="language-plaintext highlighter-rouge">⌘ U</code> — <u>Underline</u></li>
+</ul>
+
+<h3 id="font-color-picker">Font color picker</h3>
+
+<p>This control is a standard <a href="https://lunacy.docs.icons8.com/styling/#color-picker" target="_blank">color picker</a> that lets you choose the required color:</p>
+
+<ol>
+  <li>From the color field.</li>
+  <li>From preset colors.</li>
+</ol>
+
+<p>Also, you can manually enter the required color code (3).</p>
+
+<p><img src="public/text-colorpicker8.png" alt="Font color picker" /></p>
+
+<h3 id="font-size-picker">Font size picker</h3>
+
+<p>Use this control to define the required font size in pixels. You can do it by:</p>
+
+<ul>
+  <li>Selecting the required size from the list.</li>
+  <li>Entering the required value in the edit field.</li>
+  <li>Using the <a href="https://lunacy.docs.icons8.com/interface/#tips-on-working-with-the-inspector" target="_blank">mouse wheel</a>.</li>
+  <li>Using the <code class="language-plaintext highlighter-rouge">Ctrl + Alt + "+"</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ +</code> (increase) and <code class="language-plaintext highlighter-rouge">Ctrl + Alt + "-"</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ -</code> (decrease) shortcuts.</li>
+</ul>
+
+<h3 id="mixed-font-settings">Mixed font settings</h3>
+
+<p><img src="public/text-mixed.png" alt="Mixed settings" /></p>
+
+<p>You can apply different font settings of the same type (fonts, colors, font sizes or weights) to a text within a layer. In such a case the respective controls in the Inspector will display <em>Mix</em>.</p>
+
+<h3 id="text-alignment-options"><a href="#text-alignment-options">Text alignment options</a></h3>
+
+<p><img src="public/text-align.png" alt="Alignment buttons" /></p>
+
+<p>Use these buttons to align and justify the text inside the text box. Alternatively, you can use the following shortcuts:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + {</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ {</code> — align text to the left.</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + T</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ T</code>— center text.</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + }</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ }</code> — align text to the right.</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + J</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ J</code> — justify.</li>
+</ul>
+
+<h3 id="line-letter-and-paragraph-spacing">Line, letter, and paragraph spacing</h3>
+
+<p><img src="public/text-spacing1.png" alt="Spacing buttons" /></p>
+
+<p>Use these settings to adjust line, letter, and paragraph spacing. Their default values are set  <em>x</em>, <em>0</em>, and <em>0</em> respectively, where <em>x</em> depends on the selected font family, font weight, and size.</p>
+
+<p>The default line spacing appears in grey. When you change it, the figures in the box turn black. To restore the default value, delete the current value and press <code class="language-plaintext highlighter-rouge">Enter</code>.</p>
+
+<p>You can change spacing values in the following ways:</p>
+
+<ul>
+  <li>By entering the required values in the edit fields.</li>
+  <li>Using shortcuts:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Ctrl+Alt+&gt;</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ &gt;</code> or <code class="language-plaintext highlighter-rouge">Ctrl+Alt+&lt;</code>/<code class="language-plaintext highlighter-rouge">⌥ ⌘ &lt;</code> — increase or decrease line spacing.</li>
+      <li><code class="language-plaintext highlighter-rouge">Ctrl+Shift+&gt;</code>/<code class="language-plaintext highlighter-rouge">⌘ Shift &gt;</code> or <code class="language-plaintext highlighter-rouge">Ctrl+Shift+&lt;</code>/<code class="language-plaintext highlighter-rouge">⌘ Shift &lt;</code> — increase or decrease letter spacing.</li>
+      <li>There is no shortcut for paragraph spacing.</li>
+    </ul>
+  </li>
+  <li>By using the mouse wheel or dragging the mouse up and down as shown below.</li>
+</ul>
+
+<!--
+In the latter case:
+
+1. Hover the cursor over an edit field and wait a moment until the cursor turns into a double-headed arrow.
+2. Hold-down the left mouse button and move the mouse up to increase or down to decrease spacing (see the gif below).
+-->
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-magnetsph.png" height="auto"><source src="/public/text-spacing.mp4" type="video/mp4" /></video>
+
+<p><strong>See also:</strong> <a href="https://lunacy.docs.icons8.com/interface/#tips-on-working-with-the-inspector" target="_blank">Tips on working with the Inspector</a>.</p>
+
+<!--
+
+![Using mouse for spacing](public/text-spacing.gif)
+
+-->
+
+<h3 id="text-block-resize-options"><a href="#text-block-resize-options">Text block resize options</a></h3>
+
+<p><img src="public/text-rezisebtn.png" alt="Resize buttons" /></p>
+
+<p>These three buttons determine the behavior of text boxes depending on the size of the content.</p>
+
+<ol>
+  <li><strong>Horizontal resize</strong>: In this mode, the text box expands horizontally as wide as it is required to fit all the content on a single line.</li>
+  <li><strong>Vertical resize</strong>: In this mode, the text box adjusts vertically to fit all the content while the width of the box remains unchanged.</li>
+  <li><strong>Fixed size</strong>: In this mode, the size of the text box is fixed and, unlike in the above two modes, does not adjust to fit the content.</li>
+</ol>
+
+<p>You might also find handy the auto-resize feature: double-click the borders of a text box to make it fit the text (see the demo below).</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-autoresizeph.png" height="auto"><source src="/public/text-autoresize.mp4" type="video/mp4" /></video>
+
+<p>Note that a double-click over the right or left border sets the text box to the <em>horizontal resize mode</em> and transforms a multiline text into a single line.</p>
+
+<h3 id="position-alignment"><a href="#position-alignment">Position alignment</a></h3>
+
+<p><img src="public/text-aligncell.png" alt="Position alignment buttons" /></p>
+
+<p>Use these three buttons to adjust the position of text content within the text box:</p>
+
+<ul>
+  <li>Align to the top border of the text box (default).</li>
+  <li>Center text horizontally and vertically within the text box.</li>
+  <li>Align text to the bottom border of the text box.</li>
+</ul>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-aligncellph.png" height="auto"><source src="/public/text-aligncell.mp4" type="video/mp4" /></video>
+
+<h3 id="text-alignment-magnets">Text alignment magnets</h3>
+
+<p>You can also align text within text boxes using the alignment magnets that appear around the text box when you select it. They combine the functions of the <a href="#text-alignment-options">text alignment</a> and <a href="#position-alignment">position alignment</a> controls. The demo below shows how this nice feature works.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-magnetsph.png" height="auto"><source src="/public/text-magnets.mp4" type="video/mp4" /></video>
+
+<p>To disable the display of magnets, go to the <strong>View</strong> menu and uncheck the <strong>Text Alignment Magnets</strong> option.</p>
+
+<h3 id="advanced-text-options"><a href="#advanced-text-options">Advanced text options</a></h3>
+
+<p>To open the panel of advanced text options, click the settings button at the top left corner of the <strong>Text</strong> section.</p>
+
+<p><img src="public/text-advtyp.png" alt="Advanced text options" />.</p>
+
+<p>The panel features the following:</p>
+
+<ul>
+  <li>
+    <p>Letter case options:</p>
+
+    <ul>
+      <li><strong>Aa</strong>: Sentence Case (First Letter Uppercase And The Rest Lowercase).</li>
+      <li><strong>AA</strong>: ALL UPPERCASE.</li>
+      <li><strong>aa</strong>: all lower case.</li>
+    </ul>
+  </li>
+  <li>Underline and strikethrough options.</li>
+  <li>Numbered and bulleted lists.</li>
+  <li>Superscript and subscript</li>
+</ul>
+
+<h2 id="common-layer-effects">Common layer effects</h2>
+
+<p>In addition to text settings, you can also apply common, non-text, styling effects to text layers which include:</p>
+
+<ul>
+  <li>Fills</li>
+  <li>Borders</li>
+  <li>Shadows</li>
+  <li>Inner shadows</li>
+  <li>Blurs</li>
+</ul>
+
+<p>All these settings appear in the Inspector, below the <strong>Text</strong> section.</p>
+
+<p><img src="public/text-allsettings.png" alt="Common layer settings" />.</p>
+
+<p>Combinations of layer styling effects and text settings make up text styles. You can save text styles to the document assets and <a href="https://lunacy.docs.icons8.com/layerstyles/#text-styles" target="_blank">reuse</a> them across your project. Also,you can find your recent text styles on the floating panel (see below).</p>
+
+<blockquote>
+  <p><strong>Note:</strong> When you edit a text whose style includes both text and common layer settings, Lunacy hides layer styling effects and shows them back once you exit the edit mode. This is for the ease of editing heavily styled texts (see the gif below).</p>
+</blockquote>
+
+<p><img src="public/text-effectsno.gif" alt="Hiding common layer effects" /></p>
+
+<p>More about <a href="https://lunacy.docs.icons8.com/styling/" target="_blank">styling properties</a>.</p>
+
+<!--
+## [Suggestions panel](#suggestions-panel)
+
+The suggestions panel appears when you select a text. It displays suggestions of styling options based on your previous actions and choices. In case you've just started using Lunacy, the panel will provide some preset styles.
+
+Also, the list of suggested options depends on the background: Lunacy excludes options that would be scarcely visible against the current background.
+
+A view of the panel is shown in the figure below.
+
+![Suggestions panel](public/suggtext-view.png)
+
+It features a set of independently scrollable columns (except for the font size) that include:
+
+* **Text styles** (1). Each style is a combination of two or more text and styling options (font, font size, shadow, etc.).
+* **Font size** (2). A collection of recently used font sizes. If you don't see the required value, double-click over any of the values, type the required one and press `Enter` to submit.
+* **Text color** (3). A collection of text colors.  If you don't see the required color, double-click over any of the suggested colors. It opens the Color Picker where you can select a color of your choice.
+* **Font style** (4). Includes such options as bold, italic, underline, strikethrough, superscript and subscript. Unlike the other columns, the content of this column does not change.
+* **Font family** (5). A collection of recently used fonts.
+* **Text Background**. Disabled by default. Sets the color of the object overlapped by at least of 50% percent of the text box. A double-click over any of the suggested colors opens the Color Picker where you can select a color of your choice.
+
+### Changing the position of the panel
+
+If you want to change the position of the suggestions panel, click the handle at the top-left corner of the panel and drag it up or down. Lunacy remembers the position of the panel individually for each text object.
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/suggtext-positionph.png" height="auto"><source src="/public/suggtext-position.mp4" type="video/mp4"></video>
+
+### Resizing the panel
+
+You can resize the panel to your liking by dragging its lower and right borders. Note that dragging by the right border extends the right-most column, while dragging by the lower-right corner of the panel extends the left-most column of the panel.
+
+To change the size of other columns, hover the cursor between two columns and drag to the right or left when the cursor turns into a double-headed arrow (see the demo below).
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/suggtext-resizeph.png" height="auto"><source src="/public/suggtext-resize.mp4" type="video/mp4"></video>
+
+### Managing the content of the panel
+
+A right-click over the suggestions panel invokes a context menu that allows you to:
+
+* Pin your favorite items to the top of the list. Pinned items appear with a dark triangle at the lower left corner.
+* Delete items that you no longer need or will never use. For this, use the **Don't show this again** command.
+* Hide/show some of the columns by clearing/selecting the respective option on the menu (see the figure below).
+
+![Managing the content of the panel](public/sugg-menu.png)
+
+### Disabling the panel
+
+To disable the suggestions panel, use the `Ctrl+Space` shortcut or click the bulb button on the action bar (see the figure below).
+
+![Disabling the suggestions panel](public/sugg-disable1.png)
+
+Also, you can unselect the **Suggestions** option in the **View** menu.
+
+![Disabling the suggestions panel](public/sugg-disable.png)
+
+-->
+
+<h2 id="converting-text-to-vector-shapes"><a href="#converting-text-to-vector-shapes">Converting text to vector shapes</a></h2>
+
+<p>Lunacy enables you to convert text layers into vector shapes.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Select a text layer and click <strong>Text</strong> on the menu bar or left-click over a text layer to invoke the context menu.</li>
+  <li>On the displayed menu, select <strong>Convert to Outlines</strong>. Lunacy will convert letters into a group of vector shapes, which will appear in the Layer List.</li>
+</ol>
+
+<p>Alternatively, you can use the <code class="language-plaintext highlighter-rouge">Ctrl+Shift+O</code>/<code class="language-plaintext highlighter-rouge">⌘ Shift O</code> shortcut.</p>
+
+<p><img src="public/text-texttovector.gif" alt="Converting text to vectors" /></p>
+
+<p><strong>Note</strong>: Remember that the text-to-vector operation is demanding in terms of system resources. Attempts to convert large portions of text can seriously slow Lunacy down .</p>
+
+<h2 id="text-generation-and-text-snippets"><a href="#text-generation-and-text-snippets">Text generation and text snippets</a></h2>
+
+<p>Lunacy has a nice text generation feature that solves the headache of picking up texts for your prototypes. It works both for large text blocks and short text instances such as people names, mail and email addresses, phone numbers, etc.</p>
+
+<p>When you add a text block using the click-and-drag method, Lunacy automatically inserts a random text which fits or slightly exceeds the block size. If you don’t like the generated text you can refresh it.</p>
+
+<p>For this:</p>
+
+<ol>
+  <li>Select the text layer.</li>
+  <li>Click the <strong>Generate text</strong> button in the Inspector until you get the text that you find acceptable. Alternatively, you can use the <code class="language-plaintext highlighter-rouge">Shift+R</code> shortcut to refresh the content.</li>
+</ol>
+
+<p><img src="public/text-textgen8.png" alt="Generate text buttons" /></p>
+
+<p>To generate such texts as names, addresses, etc., proceed as follows.</p>
+
+<p><strong>Way 1. Selecting from the menu</strong></p>
+
+<ol>
+  <li>Select the required text block.</li>
+  <li>In the Inspector, click the down arrowhead next to the <strong>Generate text</strong> button. A menu with text categories appears.</li>
+  <li>Use the menu to select the required content. If necessary, use the <code class="language-plaintext highlighter-rouge">Shift + R</code> shortcut or the <strong>Generate text</strong> button to refresh generated content.</li>
+</ol>
+
+<p><img src="public/text-textgenmenu8.png" alt="Generate text menu" /></p>
+
+<p>The <strong>Auto Refresh</strong> option on the menu enables/disables text generation in duplicated text blocks. With this option selected, when you  duplicate a text block with an autogenerated text, the new block will contain a new text.</p>
+
+<video autoplay="" muted="" loop="" playsinline="" width="auto" poster="/public/text-refreshph.png" height="auto"><source src="/public/text-refresh.mp4" type="video/mp4" /></video>
+
+<!--
+
+![Auto refresh](public/text-autogen2.gif)
+
+-->
+
+<p><strong>Way 2. Using text snippets</strong></p>
+
+<p>In Lunacy, text snippets are short commands for generation of specific texts. Snippets always begin with a semicolon (;) followed by a full or short form of the command. For instance, to generate an email address, you should type <em>;email</em> or <em>;em</em>. To generate a credit card number, type <em>;creditcard</em> or <em>;cr</em>, and so on. You can always look up the list of snippets on the menu with text categories (see the figure in <em>Way 1</em>) or in the shortcuts panel.</p>
+
+<ol>
+  <li>Select the required text block.</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Enter</code> or click the <strong>Edit Layer</strong> button on the top bar to enable the edit mode.</li>
+  <li>Enter the required snippet and and press <code class="language-plaintext highlighter-rouge">Esc</code>. Use the <code class="language-plaintext highlighter-rouge">Shift + R</code> shortcut to refresh generated content, if needed.</li>
+</ol>
+
+<p><img src="public/text-snippets2.gif" alt="Using snippets" /></p>
+
+<h2 id="fonts-embedding">Fonts Embedding</h2>
+
+<p>You can embed fonts into your document before sharing it with other people. This ensures that text layers will look exactly as you designed them everywhere even if a computer doesn’t have all the right fonts.</p>
+
+<p>To use this feature, click <strong>Text &gt; Fonts Embedding</strong> on the menu bar. In the displayed dialog box, select the required fonts and click the <strong>Embed fonts</strong> button.</p>
+
+<p><img src="/public/rn-fontsembed.png" alt="Fonts Embedding" /></p>
+
+<p><strong>Note:</strong> By embedding a font you confirm that you have a proper license that allows you to distribute the font.</p>
+
+
+							
+							<div class="page-nav">
+								
+								<a href="/layers" class="page-nav__item page-nav__item--prev">
+									<span>←</span>
+									<span class="page-nav__text">Layers</span>
+								</a>
+								
+								
+								<a href="/styling" class="page-nav__item page-nav__item--next">
+									<span class="page-nav__text">Styling</span>
+									<span>→</span>
+								</a>
+								
+							</div>
+							
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section><!-- /.section -->
+		
+		
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <button class="btn--back-top">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.812103 6L8.80383e-07 5.16164L5 4.37114e-07L10 5.16164L9.1879 6L5 1.67671L0.812103 6Z" fill="white"/>
+                    </svg>                    
+                    Back to top
+                </button> 
+            </div>
+        </div>
+    </div>
+    <div class="footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Design Assets</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li><a href="https://icons8.com/icons" class="not-visibly">Icons</a></li>
+                        <li><a href="https://photos.icons8.com/" class="not-visibly">Stock photos</a></li>
+                        <li data-v-6c9aea26=""><a href="https://generated.photos/" data-v-6c9aea26="" class="not-visibly">AI-generated faces</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/illustrations" data-v-6c9aea26="" class="not-visibly">Vector illustrations</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/music" data-v-6c9aea26="" class="not-visibly">Royalty-free music</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/emoji" data-v-6c9aea26="" class="not-visibly mark mark--new">Emoji</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Apps</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/lunacy" data-v-6c9aea26="" class="not-visibly">Lunacy</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/app" data-v-6c9aea26="" class="not-visibly">Pichon icons</a></li>
+                        <li data-v-6c9aea26=""><a href="https://photos.icons8.com/creator" data-v-6c9aea26="" class="not-visibly mark mark--new">Photo Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/vector-creator/" data-v-6c9aea26="" class="not-visibly mark mark--new">Vector Creator</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/upscaler" data-v-6c9aea26="" class="not-visibly mark mark--new"> Smart Upscaler</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">About icons8</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/about" data-v-6c9aea26=""  class="not-visibly">In short</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/our-business-model/" data-v-6c9aea26="" class="not-visibly">Business model</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/advertising" data-v-6c9aea26="" class="not-visibly">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Community</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li class="social">
+                            <a href="https://www.pinterest.com/visualpharm/" aria-label="pinterest" class="not-visibly" data-v-6c9aea26=""><svg viewBox="0 0 24 24" width="16" height="16" data-v-6c9aea26=""><path d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.linkedin.com/company/icons8-llc" aria-label="linkedin" class="not-visibly" data-v-6c9aea26=""><svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" data-v-6c9aea26=""><path d="M3 13V3.85185H0V13H3Z" data-v-6c9aea26=""></path><path d="M1.5 0C0.6 0 0 0.515185 0 1.18926C0 1.86333 0.6 2.40741 1.5 2.40741C2.44 2.40741 3 1.86333 3 1.18926C2.965 0.515185 2.4 0 1.5 0Z" data-v-6c9aea26=""></path><path d="M11 13H14V7.82889C14 5.1663 12.39 3.85185 10.405 3.85185C8.465 3.85185 7.5 5.08444 7.5 5.08444V3.85185H4.5V13H7.5V8.18519C7.5 7.23185 8 6.24 9.21 6.24H9.25C10.5 6.25926 11 7.22222 11 8.18519V13Z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://twitter.com/icons_8" aria-label="twitter" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="12" viewBox="0 0 15 12" data-v-6c9aea26=""><path d="M15 1.42a6.42 6.42 0 0 1-1.77.48A3.06 3.06 0 0 0 14.59.22a6.34 6.34 0 0 1-1.96.73 3.1 3.1 0 0 0-2.25-.96A3.06 3.06 0 0 0 7.3 3.03a3.17 3.17 0 0 0 .08.69A8.8 8.8 0 0 1 1.04.55a2.95 2.95 0 0 0-.42 1.53A3.01 3.01 0 0 0 1.99 4.6 3.2 3.2 0 0 1 .6 4.22v.04a3.05 3.05 0 0 0 2.47 2.97 3.12 3.12 0 0 1-.82.1 2.63 2.63 0 0 1-.57-.05 3.08 3.08 0 0 0 2.87 2.11 6.24 6.24 0 0 1-3.82 1.29 6 6 0 0 1-.74-.04A8.8 8.8 0 0 0 4.71 12a8.62 8.62 0 0 0 8.76-8.62l-.01-.4A5.86 5.86 0 0 0 15 1.42" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://www.facebook.com/Icons8" aria-label="facebook" class="not-visibly" data-v-6c9aea26=""><svg width="6" height="13" viewBox="0 0 6 13" data-v-6c9aea26=""><path d="M4.27 13H1.6V6.5H0V4.34h1.6V3.02c0-1.81.54-3.01 2.64-3.01h1.63v2.16h-.98c-.82 0-.87.4-.87.97v1.2h1.97L5.76 6.5H4.27V13z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://dribbble.com/icons8" aria-label="dribbble" class="not-visibly" data-v-6c9aea26=""><svg width="13" height="13" viewBox="0 0 13 13" data-v-6c9aea26=""><path d="M8.45 7.45a7.55 7.55 0 0 1 1.4-.14 8.56 8.56 0 0 1 1.96.25 5.43 5.43 0 0 1-2.56 3.6 19.3 19.3 0 0 0-.8-3.71zm-5.14 3.46a7.98 7.98 0 0 1 4.09-3.2 17.66 17.66 0 0 1 .8 3.94 4.9 4.9 0 0 1-1.71.26 5.7 5.7 0 0 1-3.18-1zM8.09 6.4c-.13-.29-.24-.6-.38-.89a14.02 14.02 0 0 0 3.25-2.06 5.53 5.53 0 0 1 .96 3.04 8.46 8.46 0 0 0-2.07-.29 10 10 0 0 0-1.76.2zm2.16-3.8a11.71 11.71 0 0 1-3 1.91 21.57 21.57 0 0 0-2.16-3.22 5.1 5.1 0 0 1 1.4-.2 5.47 5.47 0 0 1 3.76 1.51zm-4 2.31a12.57 12.57 0 0 1-4.4.78h-.74a5.58 5.58 0 0 1 2.89-4 17.83 17.83 0 0 1 2.25 3.22zM6.49 0a6.5 6.5 0 1 0 6.52 6.49A6.48 6.48 0 0 0 6.49 0zm.56 6.69a8.74 8.74 0 0 0-4.54 3.47 5.08 5.08 0 0 1-1.42-3.4c.27 0 .51.04.76.04a14.2 14.2 0 0 0 4.86-.89 4.85 4.85 0 0 0 .34.78z" data-v-6c9aea26=""></path></svg></a>
+                            <a href="https://uxplanet.org/@icons8" aria-label="medium" class="not-visibly" data-v-6c9aea26=""><svg width="15" height="13" viewBox="0 0 15 13" data-v-6c9aea26=""><path d="M15 12.48a.43.43 0 0 1-.44.48.9.9 0 0 1-.39-.11l-.65-.33-2.88-1.48L15 3.79v8.69zM5.71 8.52V3.81l3.21 6.36-2.88-1.48zM9.49.68l.27-.43a.48.48 0 0 1 .56-.23.35.35 0 0 1 .09.04l4.53 2.31a.01.01 0 0 1 .01.01.07.07 0 0 1 .02.07l-4.51 7.5-.46.76-2.98-5.9zM5 12.48a.44.44 0 0 1-.41.52.63.63 0 0 1-.28-.08L.42 10.93a.86.86 0 0 1-.42-.69V.48A.35.35 0 0 1 .33.07a.42.42 0 0 1 .23.06L.69.2l4.29 2.19a.04.04 0 0 1 .02.02v10.07z" data-v-6c9aea26=""></path></svg></a>
+                        </li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/blog/" data-v-6c9aea26="" class="not-visibly">Blog</a></li>
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com/" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://www.producthunt.com/@icons_8" data-v-6c9aea26="" class="not-visibly">Product Hunt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="row">
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Request</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/icons/request-icon" data-v-6c9aea26="" class="not-visibly">Icon</a></li>
+                        <li data-v-6c9aea26=""><a href="https://request.icons8.com/photo-request" data-v-6c9aea26="" class="not-visibly">Photo shoot</a></li>
+                        <li data-v-6c9aea26=""><a href="https://lunatics.icons8.com" data-v-6c9aea26="" class="not-visibly">Lunacy feature</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">For Developers</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://developers.icons8.com/docs/getting-started" data-v-6c9aea26="" class="not-visibly">API documentation</a></li>
+                        <li data-v-6c9aea26=""><a href="https://img.icons8.com" data-v-6c9aea26="" class="not-visibly">Omg-Img</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/line-awesome" data-v-6c9aea26="" class="not-visibly">Line Awesome</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Support</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://community.icons8.com" data-v-6c9aea26="" class="not-visibly">Forum</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.crisp.help/en/" data-v-6c9aea26="" class="not-visibly">FAQ</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/contact" data-v-6c9aea26="" class="not-visibly">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-footer">
+                    <div class="footer__middle__col-header">Licenses</div>
+                    <ul class="footer__midle__col-ul normalize">
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/license" data-v-6c9aea26="" class="not-visibly">Free license</a></li>
+                        <li data-v-6c9aea26=""><a href="https://icons8.com/pricing" data-v-6c9aea26="" class="not-visibly mark mark--upgrade">Paid license</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <span class="footer__bottom__copywriting">© 2018 Icons8 LLC</span>
+                <a href="#" class="not-visibly">Privacy Policy</a>
+                <a href="#" class="not-visibly">Terms and Conditions</a>
+                <a href="#" class="not-visibly">Accelerated by KeyCDN</a>
+                <span class="footer__bottom__link">
+                    
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.modal.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/lunr.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/simplebar.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/search-modal.js"></script>
+
+
+
+	</body>
+</html>
